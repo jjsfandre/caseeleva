@@ -1293,4 +1293,7 @@
   <data name="There is no need for authentication data at this time. Just click &quot;Login&quot;!" xml:space="preserve">
     <value>Não há necessidade de dados de autenticação no momento. Apenas clique em "Entrar"!</value>
   </data>
+  <data name="Schools" xml:space="preserve">
+    <value>Escolas</value>
+  </data>
 </root>

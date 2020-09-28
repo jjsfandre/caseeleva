@@ -42,14 +42,14 @@ GO
 
 
 
-CREATE TABLE [dbo].[Configuracoes](
+CREATE TABLE [dbo].[Configuracao](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[IdiomaId] [int] NOT NULL
- CONSTRAINT [Configuracoes_Id_PK] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [Configuracao_Id_PK] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+) ON [PRIMARY] 
 
 GO
 
@@ -58,18 +58,25 @@ CREATE TABLE [dbo].[Idioma](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Identificador] [varchar](10) NOT NULL,
 	[Nome] [varchar](70) NOT NULL,
+	[FlagName][varchar](70) NOT NULL,
  CONSTRAINT [Idioma_Id_PK] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-INSERT [dbo].[Idioma] ([Identificador], [Nome]) VALUES (N'en-US', N'English')
-INSERT [dbo].[Idioma] ([Identificador], [Nome]) VALUES (N'pt-BR', N'Português')
+INSERT [dbo].[Idioma] ([Identificador], [Nome], [FlagName]) VALUES (N'en-US', N'English', N'United-States.png')
+INSERT [dbo].[Idioma] ([Identificador], [Nome], [FlagName]) VALUES (N'pt-BR', N'Português', N'Brazil.png')
 GO
 
 DECLARE @IdiomaId INT=(SELECT ID FROM Idioma WHERE Identificador='pt-BR')
 
-INSERT [dbo].[Configuracoes] ([IdiomaId]) VALUES (@IdiomaId)
+INSERT [dbo].[Configuracao] ([IdiomaId]) VALUES (@IdiomaId)
 GO
 
+
+ALTER TABLE [dbo].[Configuracao]  WITH CHECK ADD  CONSTRAINT [Configuracao_Idioma_FK] FOREIGN KEY([IdiomaId])
+REFERENCES [dbo].[Idioma] ([Id])
+GO
+ALTER TABLE [dbo].[Configuracao] CHECK CONSTRAINT [Configuracao_Idioma_FK]
+GO

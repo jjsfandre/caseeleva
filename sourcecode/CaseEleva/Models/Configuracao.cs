@@ -12,7 +12,7 @@ namespace CaseEleva.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Configuracoes
+    public partial class Configuracao
     {
         public int Id { get; set; }
         public int IdiomaId { get; set; }

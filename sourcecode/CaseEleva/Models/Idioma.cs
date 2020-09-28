@@ -17,14 +17,15 @@ namespace CaseEleva.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Idioma()
         {
-            this.Configuracoes = new HashSet<Configuracoes>();
+            this.Configuracao = new HashSet<Configuracao>();
         }
     
         public int Id { get; set; }
         public string Identificador { get; set; }
         public string Nome { get; set; }
+        public string FlagName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Configuracoes> Configuracoes { get; set; }
+        public virtual ICollection<Configuracao> Configuracao { get; set; }
     }
 }

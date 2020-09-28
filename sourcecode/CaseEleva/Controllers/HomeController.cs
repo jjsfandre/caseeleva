@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using CaseEleva.Models;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace CaseEleva.Controllers
 {
@@ -9,6 +11,11 @@ namespace CaseEleva.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            using (var context = new CaseElevaEntities())
+            {
+                ViewBag.Idiomas = context.Idioma.ToList();
+            }
+
             return View();
         }
 

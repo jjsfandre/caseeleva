@@ -8,9 +8,9 @@
         <EntityTypeShape EntityType="CaseElevaModel.Escola" Width="1.5" PointX="4.5" PointY="2" />
         <EntityTypeShape EntityType="CaseElevaModel.Turma" Width="1.5" PointX="6.75" PointY="2.25" />
         <AssociationConnector Association="CaseElevaModel.Turma_Escola_FK" />
-        <EntityTypeShape EntityType="CaseElevaModel.Configuracoes" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="CaseElevaModel.Idioma" Width="1.5" PointX="0.75" PointY="3.75" />
-        <AssociationConnector Association="CaseElevaModel.Configuracoes_Idioma_FK" />
+        <EntityTypeShape EntityType="CaseElevaModel.Configuracao" Width="1.5" PointX="3" PointY="6" />
+        <AssociationConnector Association="CaseElevaModel.Configuracao_Idioma_FK" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

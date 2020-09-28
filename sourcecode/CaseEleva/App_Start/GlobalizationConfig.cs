@@ -29,7 +29,7 @@ namespace CaseEleva.App_Start
             string language;
             using (Models.CaseElevaEntities context = new Models.CaseElevaEntities())
             {
-                language = context.Configuracoes.SingleOrDefault().Idioma.Identificador;
+                language = context.Configuracao.SingleOrDefault().Idioma.Identificador;
             }
             return language;
         }

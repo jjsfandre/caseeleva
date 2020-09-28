@@ -280,6 +280,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\GlobalizationConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ConfiguracaoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Helpers\Authentication.cs" />
@@ -303,7 +304,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CaseElevaModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Configuracoes.cs">
+    <Compile Include="Models\Configuracao.cs">
       <DependentUpon>CaseElevaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Escola.cs">
@@ -348,6 +349,7 @@
     <Folder Include="Models\PostData\Person\" />
     <Folder Include="Models\PostData\Position\" />
     <Folder Include="Models\SearchModel\" />
+    <Folder Include="Views\Configuracao\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
