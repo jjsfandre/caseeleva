@@ -1,0 +1,399 @@
+﻿/*-- Global --*/
+textarea {
+    resize: none;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-table-cell {
+    display: table-cell;
+}
+
+.vertical-align-middle {
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.display-table {
+    display: table;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.color-blue {
+    color: blue;
+}
+
+.color-green {
+    color: #0b846b;
+}
+
+.align-middle {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.item-cancelled {
+    text-decoration: line-through;
+}
+
+.required-symbol:after {
+    content: " *";
+    font-weight: bold;
+    color: #ed5565;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*-- Animations --*/
+.clice-loader-contents {
+    margin-top: 15px;
+}
+
+.circle-loader {
+    margin: 0 auto;
+    fill: transparent;
+    stroke: #009688;
+    stroke-width: 5;
+    animation: dash 2s ease infinite,rotate 2s linear infinite;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1,95;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 85,95;
+        stroke-dashoffset: -25;
+    }
+
+    100% {
+        stroke-dasharray: 85,95;
+        stroke-dashoffset: -93;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.middle-card-box {
+    padding-top: 0px;
+    max-width: 500px;
+}
+
+.middle-card-box .wrapper {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.09);
+}
+
+.middle-card-box  .system-logo {
+    margin-bottom: 20px;
+}
+
+.middle-card-box .system-logo img {
+    width: 220px;
+}
+
+.middle-card-box .title {
+    margin-bottom: 5px;
+    font-weight: 200;
+}
+
+.middle-card-box .rule {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(193, 193, 193, 0.52);
+    margin: 20px 0;
+}
+
+.middle-card-box form table td {
+    padding: 0px 10px;
+}
+
+.middle-card-box form i {
+    margin-right: 10px;
+}
+
+.middle-card-box form {
+    margin-top: 20px;
+}
+
+.copyrigth,
+.copyrigth a {
+    color: #1bb394;
+}
+
+.copyrigth div {
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -250px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 1px;
+    opacity: 0.8;
+}
+
+.large-starter-button {
+    height: 100px;
+    font-size: 20px;
+}
+
+
+/*-- Expedient --*/
+/*-- Virtual Tablet --*/
+#virtual-tablet {
+    padding: 10px;
+}
+
+    #virtual-tablet .tablet-border-top {
+        width: 100%;
+        height: 50px;
+    }
+
+    #virtual-tablet .tablet-body {
+        border: 3px solid #656565;
+        box-shadow: 0px 1px 5px #000;
+    }
+
+    #virtual-tablet .tablet-border-top .tablet-body {
+        border-radius: 30px 30px 0px 0px;
+        border-bottom: none;
+    }
+
+    #virtual-tablet .tablet-border-bottom {
+        width: 100%;
+        height: 50px;
+    }
+
+        #virtual-tablet .tablet-border-bottom .tablet-body {
+            border-radius: 0px 0px 30px 30px;
+            border-top: none;
+            padding-top: 8px;
+        }
+
+    #virtual-tablet .tablet-body {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
+    #virtual-tablet .tablet-border-center {
+        width: 50px;
+        height: 100%;
+    }
+
+    #virtual-tablet .center-left .tablet-body {
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        min-height: 728px;
+    }
+
+    #virtual-tablet .center-rigth .tablet-body {
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        min-height: 728px;
+    }
+
+    #virtual-tablet iframe {
+        border: none;
+        min-width: 1024px;
+        min-height: 720px;
+        background: white;
+        visibility: hidden;
+    }
+
+    #virtual-tablet table {
+        margin: 0px auto;
+        box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.71);
+        border-radius: 31px;
+    }
+
+    #virtual-tablet .camera-top {
+        opacity: 0.8;
+        width: 7px;
+        height: 7px;
+        background-color: #353535;
+        border-radius: 10px;
+        margin: 18px auto;
+        border: 2px solid #4a4a4a;
+    }
+
+    #virtual-tablet .buttom-home {
+        opacity: 0.8;
+        width: 30px;
+        height: 30px;
+        background-color: #131313;
+        border-radius: 30px;
+        margin: 0px auto;
+        border: 1px solid #3a3a3a;
+    }
+
+    #virtual-tablet .frame {
+        padding: 2px;
+        background-color: #403f3f;
+        min-width: 1024px;
+        min-height: 720px;
+        position: relative;
+    }
+
+    #virtual-tablet .toast {
+        display: none;
+        position: absolute;
+        bottom: 40px;
+        background: transparent;
+        width: 100%;
+    }
+
+    #virtual-tablet .toast .toast-contents {
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(88, 88, 88, 0.34);
+        border-radius: 20px;
+        padding: 4px;
+        color: #484848;
+    }
+
+/*-- Virtual Printer --*/
+#virtual-printer {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+    #virtual-printer .printer-front {
+        background-color: #1b1b1b;
+        width: 250px;
+        height: 70px;
+        border-radius: 6px 6px 3px 3px;
+        position: relative;
+    }
+
+    #virtual-printer .printer-top {
+        width: 250px;
+        height: 24px;
+        border-radius: 6px 6px 3px 3px;
+        position: relative;
+        -webkit-perspective: 150px;
+        perspective: 130px;
+    }
+
+    #virtual-printer .printer-translated {
+        background-color: #1b1b1b;
+        width: 228px;
+        margin-left: 11px;
+        height: 30px;
+        border-radius: 6px 6px 3px 3px;
+        position: relative;
+        -webkit-transform: rotateX(45deg);
+        transform: rotateX(45deg);
+    }
+
+    #virtual-printer .printer-led-on {
+        width: 3px;
+        height: 3px;
+        background-color: #ffff0e;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px #ffff0e;
+        position: absolute;
+        bottom: 15px;
+        right: 80px;
+    }
+
+    #virtual-printer .printer-led-printing {
+        width: 3px;
+        height: 3px;
+        background-color: #00cde2;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px #00cde2;
+        position: absolute;
+        bottom: 15px;
+        right: 60px;
+    }
+
+    #virtual-printer .paper-door {
+        background-color: #000000;
+        width: 212px;
+        height: 6px;
+        border: 2px solid #2f2e2e;
+        margin-left: 7px;
+        position: absolute;
+        bottom: 4px;
+    }
+
+    #virtual-printer .paper {
+        width: 210px;
+        position: absolute;
+        z-index: 99;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.26);
+        left: 19px;
+        bottom: 4px;
+        cursor: pointer;
+    }
+
+    #virtual-printer .close-btn {
+        float: right;
+        background-color: #808080;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        margin-top: -7px;
+        margin-right: -7px;
+        color: white;
+        display: none;
+    }
+
+    #virtual-printer .paper .contents {
+        width: 210px;
+        height: 5px;
+        background-color: #fffcd3;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.26);
+    }
+
+    #virtual-printer .paper .line {
+        height: 12px;
+        margin: 0 5px;
+        font-size: 11px;
+        font-family: monospace;
+    }

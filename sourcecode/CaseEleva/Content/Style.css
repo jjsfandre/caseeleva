@@ -1,0 +1,160 @@
+
+input[type=checkbox], input[type=radio]{
+    margin-top:0px;
+}
+
+.checkbox-enabled {
+    float: right;
+}
+
+.checkbox-enabled input{
+    margin-left:10px;
+}
+
+.checkbox-enabled label {
+    margin: 0px;
+}
+
+.center-message-chart{
+    text-align: center;
+    padding: 20px;
+    color: #bdbaba;
+    font-size: 15px;
+    margin: 120px auto;
+    width: 300px;
+    border: 2px dashed #dadada;
+    border-radius: 10px;
+}
+
+/*-- View: Login/Login --*/
+    .background-body {
+        background-image: url(../../../Content/Images/bg_0001.jpg);
+        width: 100%;
+        height: 100vh;
+    }
+
+    #ce-login .company-name {
+        color: #7d7c7c;
+        font-size: 37px;
+        font-weight: 300;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        font-weight: 400px;
+    }
+
+    #ce-login .forgot-password, #ce-forgot .go-back-login {
+        text-align: left;
+    }
+
+/*-- View: Home/Index --*/
+    #ce-wrapper {
+        max-width: 100%;
+        background-color: #293846;
+    }
+
+    #ce-wrapper .nav-header{
+       padding: 20px 25px;
+    }
+    
+    #ce-wrapper #profile-picture,
+    #form-person-detail #profile-picture {
+        margin-bottom: 6px;
+        width: 80px;
+    }
+
+    #ce-wrapper #company-name {
+        color: #dfe4ed;
+    }
+
+    .logo-element img{
+        width: 40px;
+        margin-left: -10px;
+    }
+
+
+
+.modal-dialog {
+  top: 50%;
+}
+
+.modal-body{
+    padding: 0px;
+}
+
+.color-red{
+    color:red;
+}
+.color-green{
+    color:green;
+}
+.color-blue{
+    color:blue;
+}
+
+.display-none{
+    display: none;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.jqgrow {
+    cursor:pointer;
+}
+
+.indent-node {
+    padding-left: 40px!important;
+}
+
+.div-toolbar-grid{
+    color: #000000;
+    padding-right: 10px;
+}
+
+.div-toolbar-grid button{
+    font-size: 13px;
+    margin-right: 5px; 
+}
+.div-toolbar-grid button i {
+    margin-right: 5px;
+} 
+
+.group-label label{
+        text-align:left!important;
+}
+
+.group-label {
+    margin-bottom:2px;
+}
+
+.form-horizontal .col-lg-1, .form-horizontal .col-lg-10, .form-horizontal .col-lg-11, .form-horizontal .col-lg-12, .form-horizontal .col-lg-2, .form-horizontal .col-lg-3, .form-horizontal .col-lg-4, .form-horizontal .col-lg-5, .form-horizontal .col-lg-6, .form-horizontal .col-lg-7, .form-horizontal .col-lg-8, .form-horizontal .col-lg-9, .form-horizontal .col-md-1, .form-horizontal .col-md-10, .form-horizontal .col-md-11, .form-horizontal .col-md-12, .form-horizontal .col-md-2, .form-horizontal .col-md-3, .form-horizontal .col-md-4, .form-horizontal .col-md-5, .form-horizontal .col-md-6, .form-horizontal .col-md-7, .form-horizontal .col-md-8, .form-horizontal .col-md-9, .form-horizontal .col-sm-1, .form-horizontal .col-sm-10, .form-horizontal .col-sm-11, .form-horizontal .col-sm-12, .form-horizontal .col-sm-2, .form-horizontal .col-sm-3, .form-horizontal .col-sm-4, .form-horizontal .col-sm-5, .form-horizontal .col-sm-6, .form-horizontal .col-sm-7, .form-horizontal .col-sm-8, .form-horizontal .col-sm-9, .form-horizontal .col-xs-1, .form-horizontal .col-xs-10, .form-horizontal .col-xs-11, .form-horizontal .col-xs-12, .form-horizontal .col-xs-2, .form-horizontal .col-xs-3, .form-horizontal .col-xs-4, .form-horizontal .col-xs-5, .form-horizontal .col-xs-6, .form-horizontal .col-xs-7, .form-horizontal .col-xs-8, .form-horizontal .col-xs-9{
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+.form-horizontal .form-group{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+.ibox-title h3 {
+    font-size: 16px;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+.chosen-container-multi .chosen-choices {
+    min-height: 34px;
+    max-height: 34px;
+    border: 1px solid #e5e6e7;
+    border-radius: 0px;
+}
+
+.chosen-container-active .chosen-choices {
+    border: 1px solid #5897fb;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+} 

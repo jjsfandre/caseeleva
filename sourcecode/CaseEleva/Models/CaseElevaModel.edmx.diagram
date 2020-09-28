@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fc415b12978941cd93a8b979e72be21a" Name="Diagram1">
+        <EntityTypeShape EntityType="CaseElevaModel.Escola" Width="1.5" PointX="4.5" PointY="2" />
+        <EntityTypeShape EntityType="CaseElevaModel.Turma" Width="1.5" PointX="6.75" PointY="2.25" />
+        <AssociationConnector Association="CaseElevaModel.Turma_Escola_FK" />
+        <EntityTypeShape EntityType="CaseElevaModel.Configuracoes" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CaseElevaModel.Idioma" Width="1.5" PointX="0.75" PointY="3.75" />
+        <AssociationConnector Association="CaseElevaModel.Configuracoes_Idioma_FK" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

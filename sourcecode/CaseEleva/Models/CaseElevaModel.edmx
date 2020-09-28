@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CaseElevaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Configuracoes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdiomaId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Escola">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Logradouro" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Numero" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Complemento" Type="varchar" MaxLength="70" />
+          <Property Name="Cidade" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Telefone" Type="varchar" MaxLength="70" />
+          <Property Name="Diretor" Type="varchar" MaxLength="70" />
+        </EntityType>
+        <EntityType Name="Idioma">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Identificador" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Turma">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EscolaId" Type="int" Nullable="false" />
+          <Property Name="Professor" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="TotalAlunos" Type="int" Nullable="false" />
+          <Property Name="Descricao" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="Configuracoes_Idioma_FK">
+          <End Role="Idioma" Type="Self.Idioma" Multiplicity="1" />
+          <End Role="Configuracoes" Type="Self.Configuracoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Idioma">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Configuracoes">
+              <PropertyRef Name="IdiomaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Turma_Escola_FK">
+          <End Role="Escola" Type="Self.Escola" Multiplicity="1" />
+          <End Role="Turma" Type="Self.Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Escola">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Turma">
+              <PropertyRef Name="EscolaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CaseElevaModelStoreContainer">
+          <EntitySet Name="Configuracoes" EntityType="Self.Configuracoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Escola" EntityType="Self.Escola" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Idioma" EntityType="Self.Idioma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turma" EntityType="Self.Turma" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Configuracoes_Idioma_FK" Association="Self.Configuracoes_Idioma_FK">
+            <End Role="Idioma" EntitySet="Idioma" />
+            <End Role="Configuracoes" EntitySet="Configuracoes" />
+          </AssociationSet>
+          <AssociationSet Name="Turma_Escola_FK" Association="Self.Turma_Escola_FK">
+            <End Role="Escola" EntitySet="Escola" />
+            <End Role="Turma" EntitySet="Turma" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CaseElevaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CaseElevaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Escola" EntityType="CaseElevaModel.Escola" />
+          <EntitySet Name="Turma" EntityType="CaseElevaModel.Turma" />
+          <AssociationSet Name="Turma_Escola_FK" Association="CaseElevaModel.Turma_Escola_FK">
+            <End Role="Escola" EntitySet="Escola" />
+            <End Role="Turma" EntitySet="Turma" />
+          </AssociationSet>
+          <EntitySet Name="Configuracoes" EntityType="CaseElevaModel.Configuracoes" />
+          <EntitySet Name="Idioma" EntityType="CaseElevaModel.Idioma" />
+          <AssociationSet Name="Configuracoes_Idioma_FK" Association="CaseElevaModel.Configuracoes_Idioma_FK">
+            <End Role="Idioma" EntitySet="Idioma" />
+            <End Role="Configuracoes" EntitySet="Configuracoes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Escola">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Logradouro" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Numero" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Complemento" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Cidade" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Telefone" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Diretor" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Turma" Relationship="CaseElevaModel.Turma_Escola_FK" FromRole="Escola" ToRole="Turma" />
+        </EntityType>
+        <EntityType Name="Turma">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EscolaId" Type="Int32" Nullable="false" />
+          <Property Name="Professor" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="TotalAlunos" Type="Int32" Nullable="false" />
+          <Property Name="Descricao" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Escola" Relationship="CaseElevaModel.Turma_Escola_FK" FromRole="Turma" ToRole="Escola" />
+        </EntityType>
+        <Association Name="Turma_Escola_FK">
+          <End Type="CaseElevaModel.Escola" Role="Escola" Multiplicity="1" />
+          <End Type="CaseElevaModel.Turma" Role="Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Escola">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Turma">
+              <PropertyRef Name="EscolaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Configuracoes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdiomaId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Idioma" Relationship="CaseElevaModel.Configuracoes_Idioma_FK" FromRole="Configuracoes" ToRole="Idioma" />
+        </EntityType>
+        <EntityType Name="Idioma">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Identificador" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Configuracoes" Relationship="CaseElevaModel.Configuracoes_Idioma_FK" FromRole="Idioma" ToRole="Configuracoes" />
+        </EntityType>
+        <Association Name="Configuracoes_Idioma_FK">
+          <End Type="CaseElevaModel.Idioma" Role="Idioma" Multiplicity="1" />
+          <End Type="CaseElevaModel.Configuracoes" Role="Configuracoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Idioma">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Configuracoes">
+              <PropertyRef Name="IdiomaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CaseElevaModelStoreContainer" CdmEntityContainer="CaseElevaEntities">
+          <EntitySetMapping Name="Escola">
+            <EntityTypeMapping TypeName="CaseElevaModel.Escola">
+              <MappingFragment StoreEntitySet="Escola">
+                <ScalarProperty Name="Diretor" ColumnName="Diretor" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turma">
+            <EntityTypeMapping TypeName="CaseElevaModel.Turma">
+              <MappingFragment StoreEntitySet="Turma">
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="TotalAlunos" ColumnName="TotalAlunos" />
+                <ScalarProperty Name="Professor" ColumnName="Professor" />
+                <ScalarProperty Name="EscolaId" ColumnName="EscolaId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Configuracoes">
+            <EntityTypeMapping TypeName="CaseElevaModel.Configuracoes">
+              <MappingFragment StoreEntitySet="Configuracoes">
+                <ScalarProperty Name="IdiomaId" ColumnName="IdiomaId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Idioma">
+            <EntityTypeMapping TypeName="CaseElevaModel.Idioma">
+              <MappingFragment StoreEntitySet="Idioma">
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

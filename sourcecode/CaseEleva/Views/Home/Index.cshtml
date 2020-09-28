@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="ce-wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <div>
+                                    <img alt="image" id="profile-picture"  src="@Url.Content("~/Content/Images/logo.png")">
+                                </div>
+                                <div id="company-name">Eleva Educação</div>
+                            </span>
+                        </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear">
+                                <strong class="font-bold">Jônatas André (jonatas.andre)</strong> <b class="caret"></b>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu animated m-t-xs ">
+                            <li><a onclick="FJ.Person.RenderModelMyAccount()">@GlobalizationController.GetInstance().GetString("My account")</a></li>
+                            <li><a onclick="FJ.Person.RenderModelChangeProfilePicture()">@GlobalizationController.GetInstance().GetString("Change profile picture")</a></li>
+                            <li><a href="/Login/Logout">@GlobalizationController.GetInstance().GetString("Logout")</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        <img src="Content/Images/favicon.png">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-default " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+
+                <ul class="nav navbar-top-links navbar-right">
+                    <!--<li class="dropdown open">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <i class="fa fa-bell"></i>  <span class="label label-danger">1</span> 
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="/Login/Logout">
+                            <i class="fa fa-sign-out"></i> @GlobalizationController.GetInstance().GetString("Logout")
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contents-page" class="wrapper wrapper-content animated fadeInRight"></div>
+        <div class="footer">
+            <div class="pull-right">
+                <strong>Copyright</strong> Eleva Educação &copy; 2020
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Administrative area" xml:space="preserve">
+    <value>Área administrativa</value>
+  </data>
+  <data name="All rights reserved" xml:space="preserve">
+    <value>Todos direitos reservados a</value>
+  </data>
+  <data name="Expedient area" xml:space="preserve">
+    <value>Área do expediente</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bem-vindo</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="Administrative password" xml:space="preserve">
+    <value>Senha administrativa</value>
+  </data>
+  <data name="Area of ​​control of the" xml:space="preserve">
+    <value>Área de controle do</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categorias</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="Change password expedient" xml:space="preserve">
+    <value>Trocar senha do expediente</value>
+  </data>
+  <data name="Closed" xml:space="preserve">
+    <value>Fechado</value>
+  </data>
+  <data name="Closure" xml:space="preserve">
+    <value>Fechamento</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Confirm the password..." xml:space="preserve">
+    <value>Confirme a senha...</value>
+  </data>
+  <data name="Couvert" xml:space="preserve">
+    <value>Couvert</value>
+  </data>
+  <data name="Current cash" xml:space="preserve">
+    <value>Caixa atual</value>
+  </data>
+  <data name="Current password" xml:space="preserve">
+    <value>Senha atual</value>
+  </data>
+  <data name="Change password" xml:space="preserve">
+    <value>Trocar senha</value>
+  </data>
+  <data name="Confirm the password" xml:space="preserve">
+    <value>Confirme a senha</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="Enter new password..." xml:space="preserve">
+    <value>Digite uma nova senha...</value>
+  </data>
+  <data name="Enter the category name here" xml:space="preserve">
+    <value>Digite o nome da categoria aqui</value>
+  </data>
+  <data name="Enter the current password..." xml:space="preserve">
+    <value>Digite a senha atual...</value>
+  </data>
+  <data name="Enter your comment here..." xml:space="preserve">
+    <value>Digite sua observação aqui...</value>
+  </data>
+  <data name="Enter yout password here" xml:space="preserve">
+    <value>Digite sua senha aqui</value>
+  </data>
+  <data name="Expedient password" xml:space="preserve">
+    <value>Senha do expediente</value>
+  </data>
+  <data name="Expedient Settings" xml:space="preserve">
+    <value>Configurações do Expediente</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filtros</value>
+  </data>
+  <data name="Final cash" xml:space="preserve">
+    <value>Valor final</value>
+  </data>
+  <data name="Financial balance" xml:space="preserve">
+    <value>Balanço financeiro</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="Go back" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="Initial cash" xml:space="preserve">
+    <value>Caixa inicial</value>
+  </data>
+  <data name="Initial cash value" xml:space="preserve">
+    <value>Valor do caixa inicial</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Itens</value>
+  </data>
+  <data name="Last name" xml:space="preserve">
+    <value>Sobrenome</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Carregando</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="MacAddress" xml:space="preserve">
+    <value>MacAddress</value>
+  </data>
+  <data name="Mobile devices" xml:space="preserve">
+    <value>Dispositivos Mobile</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mês</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>Nova senha</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Observação</value>
+  </data>
+  <data name="Open expedient" xml:space="preserve">
+    <value>Abrir expediente</value>
+  </data>
+  <data name="Opening" xml:space="preserve">
+    <value>Abertura</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Pedidos</value>
+  </data>
+  <data name="Panels" xml:space="preserve">
+    <value>Paineis</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="Payment method" xml:space="preserve">
+    <value>Método de pagamento</value>
+  </data>
+  <data name="Performance of waiters" xml:space="preserve">
+    <value>Performance dos garçons</value>
+  </data>
+  <data name="Personal settings" xml:space="preserve">
+    <value>Configurações pessoais</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="In progress" xml:space="preserve">
+    <value>Em andamento</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="Printers" xml:space="preserve">
+    <value>Impressoras</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="Required field" xml:space="preserve">
+    <value>Campo obrigatório</value>
+  </data>
+  <data name="Select a category" xml:space="preserve">
+    <value>Selecione uma categoria</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="Start a new expedient" xml:space="preserve">
+    <value>Iniciar um novo expediente</value>
+  </data>
+  <data name="Start expedient" xml:space="preserve">
+    <value>Iniciar expediente</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Summary of expedient" xml:space="preserve">
+    <value>Resumo do expediente</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Suporte</value>
+  </data>
+  <data name="Tables" xml:space="preserve">
+    <value>Mesas</value>
+  </data>
+  <data name="Tables open" xml:space="preserve">
+    <value>Mesas abertas</value>
+  </data>
+  <data name="Tax (%)" xml:space="preserve">
+    <value>Taxa (%)</value>
+  </data>
+  <data name="The Category field is required" xml:space="preserve">
+    <value>O campo Categoria é obrigatório</value>
+  </data>
+  <data name="The current user is not allowed to access this area." xml:space="preserve">
+    <value>O usuário atual não tem permissão para acessar esta área.</value>
+  </data>
+  <data name="Waiters" xml:space="preserve">
+    <value>Garçons</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="Username or password is invalid." xml:space="preserve">
+    <value>Usuário ou senha inválidos.</value>
+  </data>
+  <data name="Waiter Registration" xml:space="preserve">
+    <value>Cadastro de Garçons</value>
+  </data>
+  <data name="Categories Registration" xml:space="preserve">
+    <value>Cadastro de Categorias</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Custo</value>
+  </data>
+  <data name="Expedients" xml:space="preserve">
+    <value>Expedientes</value>
+  </data>
+  <data name="Gross profit" xml:space="preserve">
+    <value>Lucro bruto</value>
+  </data>
+  <data name="Items Registration" xml:space="preserve">
+    <value>Cadastro de Itens</value>
+  </data>
+  <data name="Net profit" xml:space="preserve">
+    <value>Lucro líquido</value>
+  </data>
+  <data name="Print in command" xml:space="preserve">
+    <value>Imprimir na comanda</value>
+  </data>
+  <data name="Printers Registration" xml:space="preserve">
+    <value>Cadastro de Impressoras</value>
+  </data>
+  <data name="Registers" xml:space="preserve">
+    <value>Cadastros</value>
+  </data>
+  <data name="Registration of payment methods" xml:space="preserve">
+    <value>Cadastro de métodos de pagamento</value>
+  </data>
+  <data name="Tables Registration" xml:space="preserve">
+    <value>Cadastro de Mesas</value>
+  </data>
+  <data name="The Coust field is required" xml:space="preserve">
+    <value>O campo Custo é obrigatório</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Ativar</value>
+  </data>
+  <data name="Add Waiter" xml:space="preserve">
+    <value>Adicionar Garçom</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Atenção</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Cor</value>
+  </data>
+  <data name="Edit Waiter" xml:space="preserve">
+    <value>Editar Garçom</value>
+  </data>
+  <data name="Loading..." xml:space="preserve">
+    <value>Carregando...</value>
+  </data>
+  <data name="Access" xml:space="preserve">
+    <value>Acesso</value>
+  </data>
+  <data name="Access key" xml:space="preserve">
+    <value>Chave de acesso</value>
+  </data>
+  <data name="Add Printer" xml:space="preserve">
+    <value>Adicionar Impressora</value>
+  </data>
+  <data name="Add Table" xml:space="preserve">
+    <value>Adicionar Mesa</value>
+  </data>
+  <data name="Attention!" xml:space="preserve">
+    <value>Atenção!</value>
+  </data>
+  <data name="Action not allowed!" xml:space="preserve">
+    <value>Ação não permitida!</value>
+  </data>
+  <data name="Add payment method" xml:space="preserve">
+    <value>Adicionar método de pagamento</value>
+  </data>
+  <data name="Add category" xml:space="preserve">
+    <value>Adicionar categoria</value>
+  </data>
+  <data name="Add item" xml:space="preserve">
+    <value>Adicionar item</value>
+  </data>
+  <data name="Birthdate" xml:space="preserve">
+    <value>Data de nascimento</value>
+  </data>
+  <data name="Closing date" xml:space="preserve">
+    <value>Data de fechamento</value>
+  </data>
+  <data name="Closing hour" xml:space="preserve">
+    <value>Hora de fechamento</value>
+  </data>
+  <data name="Choose the items for this order" xml:space="preserve">
+    <value>Escolha os itens para este pedido</value>
+  </data>
+  <data name="Close the expedient" xml:space="preserve">
+    <value>Fechar expediente</value>
+  </data>
+  <data name="Closing the expedient..." xml:space="preserve">
+    <value>Fechando o expediente...</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="Closing table..." xml:space="preserve">
+    <value>Fechando mesa...</value>
+  </data>
+  <data name="Choose a method..." xml:space="preserve">
+    <value>Escolha um método...</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="Close table" xml:space="preserve">
+    <value>Fechar mesa</value>
+  </data>
+  <data name="Enter here the last name of the waiter" xml:space="preserve">
+    <value>Digite aqui o sobrenome do garçom</value>
+  </data>
+  <data name="Enter here the name of the waiter" xml:space="preserve">
+    <value>Digite aqui o nome do garçom</value>
+  </data>
+  <data name="Enter item description here" xml:space="preserve">
+    <value>Digite aqui a descrição do item</value>
+  </data>
+  <data name="Enter the item name here" xml:space="preserve">
+    <value>Digite aqui o nome do item</value>
+  </data>
+  <data name="Enter the name of the payment method here" xml:space="preserve">
+    <value>Digite aqui o nome do método de pagamento</value>
+  </data>
+  <data name="Enter the name of the table here" xml:space="preserve">
+    <value>Digite aqui o nome da mesa</value>
+  </data>
+  <data name="Enter the payment method fee here" xml:space="preserve">
+    <value>Digite aqui a taxa do método de pagamento</value>
+  </data>
+  <data name="Enter the printer macaddress here" xml:space="preserve">
+    <value>Digite aqui o macaddress da impressora</value>
+  </data>
+  <data name="Edit Printer" xml:space="preserve">
+    <value>Editar Impressora</value>
+  </data>
+  <data name="Edit Table" xml:space="preserve">
+    <value>Editar Mesa</value>
+  </data>
+  <data name="Do you really want to close the expedient?" xml:space="preserve">
+    <value>Você realmente deseja fechar o expediente?</value>
+  </data>
+  <data name="Do you want to close this table?" xml:space="preserve">
+    <value>Você deseja fechar a mesa?</value>
+  </data>
+  <data name="Do not reply to this email" xml:space="preserve">
+    <value>Não responda a este e-mail</value>
+  </data>
+  <data name="Edit payment method" xml:space="preserve">
+    <value>Editar método de pagamento</value>
+  </data>
+  <data name="Contact your system administrator to troubleshoot the issue." xml:space="preserve">
+    <value>Entre em contato com o seu administrador para informar o problema.</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Edit category" xml:space="preserve">
+    <value>Editar categoria</value>
+  </data>
+  <data name="Edit item" xml:space="preserve">
+    <value>Editar item</value>
+  </data>
+  <data name="Do not reply to this email." xml:space="preserve">
+    <value>Não responda a este e-mail.</value>
+  </data>
+  <data name="E-mail" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Couvert:" xml:space="preserve">
+    <value>Couvert:</value>
+  </data>
+  <data name="Discount:" xml:space="preserve">
+    <value>Desconto:</value>
+  </data>
+  <data name="Do you want to cancel the selected item?" xml:space="preserve">
+    <value>Você realmente deseja cancelar o item selecionado?</value>
+  </data>
+  <data name="Do you want to cancel the selected items?" xml:space="preserve">
+    <value>Você realmente deseja cancelar os itens selecionados?</value>
+  </data>
+  <data name="You must select a record for editing." xml:space="preserve">
+    <value>Você deve selecionar um registro para edição.</value>
+  </data>
+  <data name="You must select a record for removal." xml:space="preserve">
+    <value>Você deve selecionar um registro para remoção.</value>
+  </data>
+  <data name="View details" xml:space="preserve">
+    <value>Visualizar detalhes</value>
+  </data>
+  <data name="View QRCode" xml:space="preserve">
+    <value>Visualizar QRCode</value>
+  </data>
+  <data name="Wait" xml:space="preserve">
+    <value>Aguarde</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="You must select an expedient to view your information." xml:space="preserve">
+    <value>Você precisa selecionar um expediente para ver as informações.</value>
+  </data>
+  <data name="Waiter" xml:space="preserve">
+    <value>Garçom</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Wait..." xml:space="preserve">
+    <value>Aguarde...</value>
+  </data>
+  <data name="You must choose an icon to continue." xml:space="preserve">
+    <value>Você precisa escolher um ícone para continuar.</value>
+  </data>
+  <data name="Value paid for orders + discount" xml:space="preserve">
+    <value>Valor pago pelos pedidos + descontos</value>
+  </data>
+  <data name="Value:" xml:space="preserve">
+    <value>Valor:</value>
+  </data>
+  <data name="User not found!" xml:space="preserve">
+    <value>Usuário não encontrado</value>
+  </data>
+  <data name="Total entries" xml:space="preserve">
+    <value>Total de entradas</value>
+  </data>
+  <data name="Total orders placed" xml:space="preserve">
+    <value>Total de pedidos realizados</value>
+  </data>
+  <data name="Type your password:" xml:space="preserve">
+    <value>Digite sua senha:</value>
+  </data>
+  <data name="Total value" xml:space="preserve">
+    <value>Valor total</value>
+  </data>
+  <data name="Total:" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="This table isn't open yet!" xml:space="preserve">
+    <value>Esta mesa não está aberta ainda!</value>
+  </data>
+  <data name="Total orders" xml:space="preserve">
+    <value>Total de pedidos</value>
+  </data>
+  <data name="Total value:" xml:space="preserve">
+    <value>Valor total:</value>
+  </data>
+  <data name="To pay" xml:space="preserve">
+    <value>A pagar</value>
+  </data>
+  <data name="Expedient does not exist or you are not allowed to access it!" xml:space="preserve">
+    <value>Expediente não existe ou você não tem permissão para acessá-lo!</value>
+  </data>
+  <data name="Data from the last expedient" xml:space="preserve">
+    <value>Dados do último expediente</value>
+  </data>
+  <data name="Data of the expedient" xml:space="preserve">
+    <value>Dados do expediente</value>
+  </data>
+  <data name="Enter the printer name here" xml:space="preserve">
+    <value>Digite aqui o nome da impressora</value>
+  </data>
+  <data name="Enter your password here" xml:space="preserve">
+    <value>Digite aqui sua senha</value>
+  </data>
+  <data name="Enter your username here" xml:space="preserve">
+    <value>Digite aqui seu usuário</value>
+  </data>
+  <data name="Expedient" xml:space="preserve">
+    <value>Expediente</value>
+  </data>
+  <data name="Enter your password to close the file:" xml:space="preserve">
+    <value>Digite aqui a senha para fechar o expediente:</value>
+  </data>
+  <data name="Enter with the order note" xml:space="preserve">
+    <value>Digite o comentário sobre o pedido</value>
+  </data>
+  <data name="Enter your e-mail here" xml:space="preserve">
+    <value>Digite aqui seu e-mail</value>
+  </data>
+  <data name="Enter your last name here" xml:space="preserve">
+    <value>Digite aqui seu sobrenome</value>
+  </data>
+  <data name="Enter your name here" xml:space="preserve">
+    <value>Digite aqui seu nome</value>
+  </data>
+  <data name="Enter feedback here about payment" xml:space="preserve">
+    <value>Digite aqui comentários sobre o pagamento</value>
+  </data>
+  <data name="Here you can see all expedients already opened filtered per month or not." xml:space="preserve">
+    <value>Aqui você pode ver todos os expedientes que já foram abertos filtrados pelo mês ou não.</value>
+  </data>
+  <data name="Fill in the field (s) below to filter or leave blank to return all data" xml:space="preserve">
+    <value>Preencha os campos abaixo para filtrar ou deixe em branco para retornar todos os dados</value>
+  </data>
+  <data name="Gross profit X Net profit" xml:space="preserve">
+    <value>Lucro bruto X Lucro líquido</value>
+  </data>
+  <data name="Generate new access key" xml:space="preserve">
+    <value>Gerar nova chave de acesso</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Fechamento</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Histórico</value>
+  </data>
+  <data name="Forgot your password?" xml:space="preserve">
+    <value>Esqueceu sua senha?</value>
+  </data>
+  <data name="Graph of gross profit X net profit for the month of" xml:space="preserve">
+    <value>Gráfico do lucro bruto X lucro líquido para o mês de</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Incorrect password. Try again!" xml:space="preserve">
+    <value>Senha incorreta. Tente novamente!</value>
+  </data>
+  <data name="Invalid password" xml:space="preserve">
+    <value>Senha inválida</value>
+  </data>
+  <data name="is required" xml:space="preserve">
+    <value>é obrigatório</value>
+  </data>
+  <data name="Net income obtained" xml:space="preserve">
+    <value>Lucro líquido obtido</value>
+  </data>
+  <data name="Tables services" xml:space="preserve">
+    <value>Mesas servidas</value>
+  </data>
+  <data name="The Name field is required" xml:space="preserve">
+    <value>O campo Nome é obrigatório</value>
+  </data>
+  <data name="The Price field is required" xml:space="preserve">
+    <value>O campo Preço é obrigatório</value>
+  </data>
+  <data name="There are still open tables. Close them before closing the expedient." xml:space="preserve">
+    <value>Ainda existem mesas abertas. É necessário fechá-las anteas de fechar o expediente.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="No waiter made requests in the chosen expedient." xml:space="preserve">
+    <value>Nenhum garçom fez pedidos no expediente escolhido.</value>
+  </data>
+  <data name="Observation:" xml:space="preserve">
+    <value>Observação:</value>
+  </data>
+  <data name="Opening expedient..." xml:space="preserve">
+    <value>Abrindo expediente...</value>
+  </data>
+  <data name="Pay per item" xml:space="preserve">
+    <value>Pagar por item</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Pagamento</value>
+  </data>
+  <data name="Payment method:" xml:space="preserve">
+    <value>Método de pagamento:</value>
+  </data>
+  <data name="Payments History" xml:space="preserve">
+    <value>Histórico de pagamento</value>
+  </data>
+  <data name="Print command" xml:space="preserve">
+    <value>Imprimir comanda</value>
+  </data>
+  <data name="Share the bill" xml:space="preserve">
+    <value>Dividir a conta</value>
+  </data>
+  <data name="Table history" xml:space="preserve">
+    <value>Histórico da mesa</value>
+  </data>
+  <data name="The field" xml:space="preserve">
+    <value>O campo</value>
+  </data>
+  <data name="There are pending payments for this table. Do you want to close it with pending?" xml:space="preserve">
+    <value>Existem pagamentos pendentes para essa mesa. Deseja fechar a mesa com pedências?</value>
+  </data>
+  <data name="To access this area of the system, it is necessary to register tables, waiters, categories, items and payment methods. Access the administrative area and return after completing the aforementioned registrations." xml:space="preserve">
+    <value>Para acessar esta área do sistema, é necessário registrar tabelas, garçons, categorias, itens e métodos de pagamento. Acesse a área administrativa e volte depois de concluir os registros acima mencionados.</value>
+  </data>
+  <data name="Ops!" xml:space="preserve">
+    <value>Ops!</value>
+  </data>
+  <data name="Loading order..." xml:space="preserve">
+    <value>Carregando pedido...</value>
+  </data>
+  <data name="Loading orders..." xml:space="preserve">
+    <value>Carregando pedidos...</value>
+  </data>
+  <data name="Loading payment history..." xml:space="preserve">
+    <value>Carregando histórico de pagamento...</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Método</value>
+  </data>
+  <data name="No records found!" xml:space="preserve">
+    <value>Nenhum registro enconstrado!</value>
+  </data>
+  <data name="Observation" xml:space="preserve">
+    <value>Observação</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+  <data name="Select one or more items to cancel." xml:space="preserve">
+    <value>Selecione um ou mais itens para cancelar.</value>
+  </data>
+  <data name="Sending Print Command..." xml:space="preserve">
+    <value>Enviando Impressão da Comanda...</value>
+  </data>
+  <data name="Successful cancellation." xml:space="preserve">
+    <value>Cancelado com sucesso.</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Mesa</value>
+  </data>
+  <data name="Updating Payment Data..." xml:space="preserve">
+    <value>Atualizando Dados de Pagamento...</value>
+  </data>
+  <data name="Record payment" xml:space="preserve">
+    <value>Pagamento realizado</value>
+  </data>
+  <data name="Opening date" xml:space="preserve">
+    <value>Data de abertura</value>
+  </data>
+  <data name="Opening hour" xml:space="preserve">
+    <value>Hora de abertura</value>
+  </data>
+  <data name="We are creating a new key..." xml:space="preserve">
+    <value>Nós estamos criando uma nova chave...</value>
+  </data>
+  <data name="When generating a new access key, all QRCodes generated for that table will become invalid. You will need to re-print a new QRCode and replace the old QRCode for valid access." xml:space="preserve">
+    <value>Ao gerar uma nova chave de acesso, todos os QRCodes gerados para essa tabela se tornarão inválidos. Você precisará reimprimir um novo QRCode e substituir o antigo QRCode por um acesso válido.</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Payment successfully registered!" xml:space="preserve">
+    <value>Pagamento registrado com sucesso!</value>
+  </data>
+  <data name="Please provide a reason:" xml:space="preserve">
+    <value>Forneça um motivo:</value>
+  </data>
+  <data name="We can help you with that!" xml:space="preserve">
+    <value>Nós podemos ajudar com isso!</value>
+  </data>
+  <data name="This email was automatically sent by" xml:space="preserve">
+    <value>Este e-mail foi enviado automaticamente por</value>
+  </data>
+  <data name="Method name" xml:space="preserve">
+    <value>Nome do método</value>
+  </data>
+  <data name="Performance chart of the month" xml:space="preserve">
+    <value>Gráfico de desempenho do mês</value>
+  </data>
+  <data name="Performance data of the month" xml:space="preserve">
+    <value>Dados de desempenho do mês</value>
+  </data>
+  <data name="Number of requests" xml:space="preserve">
+    <value>Número de pedidos</value>
+  </data>
+  <data name="Password Recovery Request" xml:space="preserve">
+    <value>Pedido de Recuperação de Senha</value>
+  </data>
+  <data name="Recovery Password" xml:space="preserve">
+    <value>Recuperar Senha</value>
+  </data>
+  <data name="Once closed, the expedient can not be opened again." xml:space="preserve">
+    <value>Uma vez fechado, o expediente não pode ser aberto novamente.</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Pedido</value>
+  </data>
+  <data name="Registering payment ..." xml:space="preserve">
+    <value>Registrando pagamento...</value>
+  </data>
+  <data name="Send order" xml:space="preserve">
+    <value>Enviar pedido</value>
+  </data>
+  <data name="Sending request to kitchen..." xml:space="preserve">
+    <value>Enviar pedido para cozinha...</value>
+  </data>
+  <data name="There are no items selected for the order." xml:space="preserve">
+    <value>Não há itens selecionados para o pedido.</value>
+  </data>
+  <data name="There are no items to list in this category" xml:space="preserve">
+    <value>Não há items para serem listados nessa categoria</value>
+  </data>
+  <data name="This browser don't have suport to localStorage." xml:space="preserve">
+    <value>Este navegador não possui suporte para localStorage.</value>
+  </data>
+  <data name="This information is required!" xml:space="preserve">
+    <value>Esta informação é obrigatória!</value>
+  </data>
+  <data name="Recover" xml:space="preserve">
+    <value>Recuperar</value>
+  </data>
+  <data name="Recovering your password" xml:space="preserve">
+    <value>Recuperando sua senha</value>
+  </data>
+  <data name="No expedient were opened during the chosen period." xml:space="preserve">
+    <value>Nenhum expediente foi aberto durante o período escolhido.</value>
+  </data>
+  <data name="Profit data for the month of" xml:space="preserve">
+    <value>Dados de lucro par ao mês de</value>
+  </data>
+  <data name="There was an error processing" xml:space="preserve">
+    <value>Ocorreu um erro de processamento</value>
+  </data>
+  <data name="If you have actually lost your password, click the button below to create a new one!" xml:space="preserve">
+    <value>Se você realmente perdeu sua senha, clique no botão abaixo para criar uma nova!</value>
+  </data>
+  <data name="We're aware that you may have lost your password, so we'll help you with this." xml:space="preserve">
+    <value>Estamos cientes que você pode ter perdido sua senha, então nós vamos lhe ajudar com isso.</value>
+  </data>
+  <data name="My account" xml:space="preserve">
+    <value>Minha conta</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="Rate (%)" xml:space="preserve">
+    <value>Taxa (%)</value>
+  </data>
+  <data name="The Month field is required" xml:space="preserve">
+    <value>O campo Mês é de preenchimento obrigatório</value>
+  </data>
+  <data name="Loading page..." xml:space="preserve">
+    <value>Carregando página...</value>
+  </data>
+  <data name="Loading panel data." xml:space="preserve">
+    <value>Carregando dados do painel.</value>
+  </data>
+  <data name="No waiter made requests in the chosen period." xml:space="preserve">
+    <value>Nenhum garçom fez pedidos no período escolhido.</value>
+  </data>
+  <data name="There was an internal error while processing the request. Error code: HTTP 500." xml:space="preserve">
+    <value>Ocorreu um erro interno ao processar o pedido. Código de erro: HTTP 500.</value>
+  </data>
+  <data name="No user found with this email!" xml:space="preserve">
+    <value>Nenhum usuário encontrado com este e-mail!</value>
+  </data>
+  <data name="Sorry, we could not send you an email with the recovery key. Please contact our support." xml:space="preserve">
+    <value>Desculpe, não foi possível enviar um e-mail com a chave de recuperação. Entre em contato com o nosso suporte.</value>
+  </data>
+  <data name="If you do not know what this email is about, do not worry, your account remains protected." xml:space="preserve">
+    <value>Se você não sabe do que se trata este e-mail, não se preocupe, sua conta continua protegida.</value>
+  </data>
+  <data name="It wasn't possible to remove this category as it has items associated with it." xml:space="preserve">
+    <value>Não foi possível remover a categoria pois tem itens associados a ela.</value>
+  </data>
+  <data name="It wasn't possible to remove this item as it was used in at least one order." xml:space="preserve">
+    <value>Não foi possível remover este item pois foi utilizado em pelo menos um pedido.</value>
+  </data>
+  <data name="It wasn't possible to remove this payment method as it was used to register at least one payment." xml:space="preserve">
+    <value>Não foi possível remover este método de pagamento pois foi utilizado para registrar pelo menos um pagamento.</value>
+  </data>
+  <data name="It's not possible to remove waiters while there is open expedient! Please close the expedient and try again." xml:space="preserve">
+    <value>Não é possível remover os garçons enquanto há expediente em aberto! Pos favor, feche o expediente e tente novamente.</value>
+  </data>
+  <data name="The category can not be parent of itself." xml:space="preserve">
+    <value>A caregortia não pode ser pai de si mesma.</value>
+  </data>
+  <data name="The current password is invalid or user doesn't exist!" xml:space="preserve">
+    <value>A senha atual é inválida ou o usuário não existe!</value>
+  </data>
+  <data name="The passwords you entered aren't the same!" xml:space="preserve">
+    <value>As senhas que você digitou não são iguais!</value>
+  </data>
+  <data name="This action can not be reversed in the future." xml:space="preserve">
+    <value>Esta ação não pode ser revertida no futuro.</value>
+  </data>
+  <data name="The fields below are required" xml:space="preserve">
+    <value>Os campos abaixo são obrigatórios</value>
+  </data>
+  <data name="This panel demonstrates the performance of the waiters over the months. To measure this performance the criterion used is the number of requests made." xml:space="preserve">
+    <value>Este painel demonstra o desempenho dos garçons ao longo dos meses. Para medir esse desempenho, o critério utilizado é o número de solicitações feitas.</value>
+  </data>
+  <data name="This panel demonstrates the variation and ratio between gross profit and net income over the days of the month" xml:space="preserve">
+    <value>Este painel demonstra a variação e relação entre lucro bruto e lucro líquido nos dias do mês</value>
+  </data>
+  <data name="It wasn't possible to remove this category as it has categories associated with it." xml:space="preserve">
+    <value>Não foi possível remover esta categoria, pois tem categorias associadas a ela.</value>
+  </data>
+  <data name="It wasn't possible to remove this table as it was opened at least once." xml:space="preserve">
+    <value>Não foi possível remover esta mesa pois ela foi aberta pelo menos uma vez.</value>
+  </data>
+  <data name="It wasn't possible to remove this waiter as it was used to make at least one order." xml:space="preserve">
+    <value>Não foi possível remover este garçom pois ele foi utilizado para fazer pelo menos um pedido.</value>
+  </data>
+  <data name="It's not possible to remove categories while there is open expedient! Please close the expedient and try again." xml:space="preserve">
+    <value>Não é possível remover categorias enquanto o expediente está em aberto. Por favor, feche o expediente e tente novamente.</value>
+  </data>
+  <data name="It's not possible to remove items while there is open expedient! Please close the expedient and try again." xml:space="preserve">
+    <value>Não é possível remover itens enquanto o expediente está em aberto. Por favor, feche o expediente e tente novamente.</value>
+  </data>
+  <data name="It's not possible to remove payment methods while there is open expedient! Please close the expedient and try again." xml:space="preserve">
+    <value>Não é possível remover método de pagamento enquanto o expediente está em aberto. Por favor, feche o expediente e tente novamente.</value>
+  </data>
+  <data name="It's not possible to remove printer while there is open expedient! Please close the expedient and try again." xml:space="preserve">
+    <value>Não é possível remover impressoras enquanto o expediente está em aberto. Por favor, feche o expediente e tente novamente.</value>
+  </data>
+  <data name="It's not possible to remove tables while there is open expedient! Please close the expedient and try again." xml:space="preserve">
+    <value>Não é possível remover mesas enquanto o expediente está em aberto. Por favor, feche o expediente e tente novamente.</value>
+  </data>
+  <data name="There was an error during the cancellation. Please try again." xml:space="preserve">
+    <value>Ocorreu um erro durante o cancelamento. Por favor, tente novamente.</value>
+  </data>
+  <data name="Appeal not found or invalid address. Error code: HTTP 404." xml:space="preserve">
+    <value>Recurso não encontrado ou endereço inválido. Código de erro: HTTP 404.</value>
+  </data>
+  <data name="Enter your email here" xml:space="preserve">
+    <value>Digite seu email aqui</value>
+  </data>
+  <data name="Enter your password to close the expedient:" xml:space="preserve">
+    <value>Digite sua senha para fechar o expediente:</value>
+  </data>
+  <data name="Tables serviced" xml:space="preserve">
+    <value>Mesas servidas</value>
+  </data>
+  <data name="There was an error submitting the request. Details:" xml:space="preserve">
+    <value>Ocorreu um erro ao realizar a requisição. Detalhes:</value>
+  </data>
+  <data name="You are not authorized to access this feature. Please try logging again. Error code: HTTP 401." xml:space="preserve">
+    <value>Você não está autorizado a acessar esta funcionalidade. Por favor, tente iniciar a sessão novamente. Código de erro: HTTP 401.</value>
+  </data>
+  <data name="You do not have permission to access this resource.Error code: HTTP 403." xml:space="preserve">
+    <value>Você não tem permissão para acessar este recurso. Código de erro: HTTP 403.</value>
+  </data>
+  <data name="Your session appears to be no longer active or you do not have privileges to access this feature.Do you want to reload the page ?" xml:space="preserve">
+    <value>Sua sessão parece não estar mais ativda ou você não tem privilégios para acessar este recurso. Deseja recarregar a página?</value>
+  </data>
+  <data name="The current table is closed so it is not possible to make a payment." xml:space="preserve">
+    <value>A mesa atual está fechada e não é possível fazer o pagamento.</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>Pagar</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Conversa</value>
+  </data>
+  <data name="Do we answer your question?" xml:space="preserve">
+    <value>Nós respondemos sua dúvida?</value>
+  </data>
+  <data name="Enter your answer" xml:space="preserve">
+    <value>Digite sua resposta</value>
+  </data>
+  <data name="Enter your message" xml:space="preserve">
+    <value>Digite sua mensagem</value>
+  </data>
+  <data name="Give us a grade" xml:space="preserve">
+    <value>Nos dê uma nota</value>
+  </data>
+  <data name="Sorry! We are offline at the time" xml:space="preserve">
+    <value>Desculpe! Nós estamos atualmente offline</value>
+  </data>
+  <data name="Submit review" xml:space="preserve">
+    <value>Enviar avaliação</value>
+  </data>
+  <data name="Talk to us" xml:space="preserve">
+    <value>Fale com a gente</value>
+  </data>
+  <data name="Thanks for the answer" xml:space="preserve">
+    <value>Obrigado pela resposta</value>
+  </data>
+  <data name="Turn on notifications and do not miss the conversation. Do you want to enable notifications?" xml:space="preserve">
+    <value>Ative as notificações e não perca a conversa. Deseja ativar as notificações?</value>
+  </data>
+  <data name="Type your search" xml:space="preserve">
+    <value>Digite sua busca</value>
+  </data>
+  <data name="We didn't solve your problem?" xml:space="preserve">
+    <value>Nós não resolvemos seu problema?</value>
+  </data>
+  <data name="We'd love to help you!" xml:space="preserve">
+    <value>Nós adoraríamos te ajudar!</value>
+  </data>
+  <data name="Yes!" xml:space="preserve">
+    <value>Sim!</value>
+  </data>
+  <data name="You will get an answer in one hour" xml:space="preserve">
+    <value>Você receberá uma resposta em uma hora</value>
+  </data>
+  <data name="You will get an answer in one minute" xml:space="preserve">
+    <value>Você receberá uma resposta em um minuto</value>
+  </data>
+  <data name="You will get an answer in {{time}} hours" xml:space="preserve">
+    <value>Você receberá uma resposta em {{time}} horas</value>
+  </data>
+  <data name="You will get an answer in {{time}} minutes" xml:space="preserve">
+    <value>Você receberá uma resposta em {{time}} minutos</value>
+  </data>
+  <data name="Enter here the alias of the waiter" xml:space="preserve">
+    <value>Digite aqui o apelido do garçom</value>
+  </data>
+  <data name="Alias" xml:space="preserve">
+    <value>Apelido</value>
+  </data>
+  <data name="It wasn't possible to remove this waiter because it was used at least in one expedient." xml:space="preserve">
+    <value>Não foi possível remover este garçom porque o mesmo foi usado pelo menos em um expediente.</value>
+  </data>
+  <data name="Company Settings" xml:space="preserve">
+    <value>Configurações da Empresa</value>
+  </data>
+  <data name="Namespace" xml:space="preserve">
+    <value>Namespace</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="Select a language" xml:space="preserve">
+    <value>Selecione um idioma</value>
+  </data>
+  <data name="The Language field is required" xml:space="preserve">
+    <value>O campo Idioma é obrigatório</value>
+  </data>
+  <data name="When the language changes, you must reload the page. Click OK to continue." xml:space="preserve">
+    <value>Quando o idioma é alterado, é necessário recarregar a página. Clique OK para continuar.</value>
+  </data>
+  <data name="Configuration Expedient" xml:space="preserve">
+    <value>Configurações do Expediente</value>
+  </data>
+  <data name="Commission" xml:space="preserve">
+    <value>Comissão</value>
+  </data>
+  <data name="Enter company name here" xml:space="preserve">
+    <value>Digite o nome da empresa aqui</value>
+  </data>
+  <data name="Enter company namespace here" xml:space="preserve">
+    <value>Digite o namespace da empresa aqui</value>
+  </data>
+  <data name="Commitments" xml:space="preserve">
+    <value>Compromissos</value>
+  </data>
+  <data name="Financial" xml:space="preserve">
+    <value>Financeiro</value>
+  </data>
+  <data name="People" xml:space="preserve">
+    <value>Pessoas</value>
+  </data>
+  <data name="Transactions" xml:space="preserve">
+    <value>Transações</value>
+  </data>
+  <data name="User or Password are incorrect!" xml:space="preserve">
+    <value>Usuário ou senha estão incorretos!</value>
+  </data>
+  <data name="Username and Password are required!" xml:space="preserve">
+    <value>Usuário e senha são obrigatórios!</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="Add person" xml:space="preserve">
+    <value>Adicionar pessoa</value>
+  </data>
+  <data name="Cellphone" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="CPF/CNPJ" xml:space="preserve">
+    <value>CPF/CNPJ</value>
+  </data>
+  <data name="Enter the person e-mail here" xml:space="preserve">
+    <value>Digite o e-mail</value>
+  </data>
+  <data name="Enter the person last name here" xml:space="preserve">
+    <value>Digite o sobrenome</value>
+  </data>
+  <data name="Enter the person name here" xml:space="preserve">
+    <value>Digite o nome</value>
+  </data>
+  <data name="Legal person" xml:space="preserve">
+    <value>Pessoa jurídica</value>
+  </data>
+  <data name="Natural person" xml:space="preserve">
+    <value>Pessoa física</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Posição</value>
+  </data>
+  <data name="Select a position" xml:space="preserve">
+    <value>Selecione uma posição</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="The Last name field is required" xml:space="preserve">
+    <value>O campo Sobrenome é obrigatório</value>
+  </data>
+  <data name="The Position field is required" xml:space="preserve">
+    <value>O campo Posição é obrigatório</value>
+  </data>
+  <data name="Company name" xml:space="preserve">
+    <value>Razão social</value>
+  </data>
+  <data name="Edit person" xml:space="preserve">
+    <value>Editar pessoa</value>
+  </data>
+  <data name="This person can not be deleted because it has already been used in the system." xml:space="preserve">
+    <value>Essa pessoa não pode ser excluída, porque já foi utilizada no sistema.</value>
+  </data>
+  <data name="Add position" xml:space="preserve">
+    <value>Adicionar posição</value>
+  </data>
+  <data name="As this is your first time access, you need to change your password." xml:space="preserve">
+    <value>Como este é seu primeiro acesso, é necessário alterar a sua senha.</value>
+  </data>
+  <data name="Edit position" xml:space="preserve">
+    <value>Editar posição</value>
+  </data>
+  <data name="Positions" xml:space="preserve">
+    <value>Posições</value>
+  </data>
+  <data name="The entered passwords does not match." xml:space="preserve">
+    <value>As senha informadas não coincidem.</value>
+  </data>
+  <data name="This position can not be deleted because there are people associated with it." xml:space="preserve">
+    <value>Esta posição não pode ser excluída porque existem pessoas associadas à ela.</value>
+  </data>
+  <data name="Enter the username here" xml:space="preserve">
+    <value>Digite o nome de usuário aqui</value>
+  </data>
+  <data name="Renew password" xml:space="preserve">
+    <value>Renovar password</value>
+  </data>
+  <data name="The Nickname field is required" xml:space="preserve">
+    <value>O campo Usuário é obrigatório</value>
+  </data>
+  <data name="The password you entered is incorrect" xml:space="preserve">
+    <value>A senha informada está incorreta</value>
+  </data>
+  <data name="The user logged into the system can not stop being a user. Log in with another user and repeat the operation" xml:space="preserve">
+    <value>O usuário logado no sistema não pode deixar de ser usuário. Faça o login com outro usuário e repita a operação</value>
+  </data>
+  <data name="Change profile picture" xml:space="preserve">
+    <value>Alterar foto de perfil</value>
+  </data>
+  <data name="Choose file" xml:space="preserve">
+    <value>Escolher arquivo</value>
+  </data>
+  <data name="Choose your profile photo and crop to use it in the system" xml:space="preserve">
+    <value>Escolha a sua foto de perfil e realize o recorte para usá-la no sistema</value>
+  </data>
+  <data name="Preview image" xml:space="preserve">
+    <value>Visualizar imagem</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="Profile picture" xml:space="preserve">
+    <value>Foto de perfil</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Sucesso</value>
+  </data>
+  <data name="The profile picture was successfully save" xml:space="preserve">
+    <value>A foto do perfil foi salva com sucesso</value>
+  </data>
+  <data name="Upload new image" xml:space="preserve">
+    <value>Carregar nova imagem</value>
+  </data>
+  <data name="Contact us" xml:space="preserve">
+    <value>Fale conosco</value>
+  </data>
+  <data name="Email sent by the system support area" xml:space="preserve">
+    <value>E-mail enviado pela área de suporte do sistema</value>
+  </data>
+  <data name="Enter the message here" xml:space="preserve">
+    <value>Digite a mensagem aqui</value>
+  </data>
+  <data name="Enter the subject here" xml:space="preserve">
+    <value>Digite o assunto aqui</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Mensagem</value>
+  </data>
+  <data name="Message:" xml:space="preserve">
+    <value>Mensagem:</value>
+  </data>
+  <data name="Sender:" xml:space="preserve">
+    <value>Remetente:</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Assunto</value>
+  </data>
+  <data name="Thank you!" xml:space="preserve">
+    <value>Obrigado!</value>
+  </data>
+  <data name="There was an error sending the message. Try contact us in support@fastjus.com." xml:space="preserve">
+    <value>Houve um erro na tentativa de enviar a mensagem. Tente nos contactar pelo e-mail support@fastjus.com.</value>
+  </data>
+  <data name="We will contact you to respond as soon as possible." xml:space="preserve">
+    <value>Entraremos em contato para respondê-lo o mais rápido possível.</value>
+  </data>
+  <data name="Advanced search" xml:space="preserve">
+    <value>Pesquisa avançada</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pesquisar</value>
+  </data>
+  <data name="Choose one or more positions" xml:space="preserve">
+    <value>Escolha uma ou mais posições</value>
+  </data>
+  <data name="No results match" xml:space="preserve">
+    <value>Nenhum resultado encontrado</value>
+  </data>
+  <data name="Select an option" xml:space="preserve">
+    <value>Selecione uma opção</value>
+  </data>
+  <data name="Select some options" xml:space="preserve">
+    <value>Selecione algumas opções</value>
+  </data>
+  <data name="There is no need for authentication data at this time. Just click &quot;Login&quot;!" xml:space="preserve">
+    <value>Não há necessidade de dados de autenticação no momento. Apenas clique em "Entrar"!</value>
+  </data>
+</root>

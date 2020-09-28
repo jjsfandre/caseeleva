@@ -1,0 +1,90 @@
+﻿/*-- @Override: Bootstrap --*/
+@media (min-width: 768px) {
+    .form-horizontal .control-label{
+        padding-top: 0;
+    }
+}
+
+/*-- @Override: SweetAlert 2 --*/
+.swal2-container { /*Make sweetalert always on top*/
+    z-index: 9999999;
+}
+
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep,
+.swal2-progresssteps .swal2-progresscircle,
+.swal2-progresssteps .swal2-progressline {
+    background: #16987e;
+}
+
+    .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline,
+    .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
+        background: #5dcbb5;
+    }
+/*-- @Override: SweetAlert 2 --*/
+
+/*-- @Override: Icon Picker --*/
+.iconpicker-popover {
+    z-index: 99999 !important;
+}
+/*-- @Override: Icon Picker --*/
+
+/*-- @Override Chosen Plugin --*/
+.chosen-container-multi .chosen-choices li.search-field .default {
+    color: #999 !important;
+}
+
+.chosen-container-single .chosen-single {
+    background: #ffffff;
+    box-shadow: none;
+    -moz-box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5DD;
+    border-radius: 2px;
+    cursor: pointer;
+    height: auto !important;
+    margin: 0;
+    min-height: 30px;
+    overflow: hidden;
+    padding: 4px 12px;
+    position: relative;
+    width: 100%;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+    background: #f1f1f1;
+    border: 1px solid #ededed;
+    border-radius: 2px;
+    box-shadow: none;
+    color: #333333;
+    cursor: default;
+    line-height: 13px;
+    margin: 3px 0 3px 5px;
+    padding: 3px 20px 3px 5px;
+    position: relative;
+}
+/*-- @Override Chosen Plugin --*/
+
+.mini-navbar .metismenu .collapse a span {
+    display: block !important;
+}
+
+/*-- @Override: Bootstrap --*/
+@media (min-width: 768px) {
+    .form-horizontal .control-label {
+        padding-top: 0;
+    }
+}
+
+.form-horizontal .group-label {
+    margin-bottom: 2px;
+}
+
+.form-horizontal .form-group.group-label {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/*-- @Override: DatePicker --*/
+.datepicker.dropdown-menu {
+    z-index: 2050 !important;
+}

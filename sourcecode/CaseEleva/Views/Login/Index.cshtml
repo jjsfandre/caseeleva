@@ -1,0 +1,57 @@
+﻿
+<div class="background-body display-table">
+    <div class="display-table-cell vertical-align-middle">
+        <div class="middle-box text-center animated fadeInDown middle-card-box" id="fj-login">
+            <div class="wrapper">
+                <div class="logo">
+                    <div>
+                        <div class="system-logo"><img src="@Url.Content("~/Content/Images/logo.png")" alt="" /></div>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="title">@GlobalizationController.GetInstance().GetString("Administrative area")</h5>
+                    <h3 class="company-name">Eleva Educação</h3>
+                </div>
+                <div class="rule"></div>
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-login" }))
+                {
+                    @Html.AntiForgeryToken();
+                    <div class="form-group">
+                        <table class="full-width">
+                            <tr>
+                                <td>
+                                    @Html.TextBox("Nickname", null, new { @class = "form-control", @placeholder = GlobalizationController.GetInstance().GetString("Enter your username here") })
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form-group">
+                        <table class="full-width">
+                            <tr>
+                                <td>
+                                    @Html.Password("Password", null, new { @class = "form-control", @placeholder = GlobalizationController.GetInstance().GetString(("Enter your password here")) })
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-primary block full-width">
+                                        <i class="fa fa-lock"></i>
+                                        @GlobalizationController.GetInstance().GetString("Login")
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <table class="full-width">
+                        <tr>
+                            <td>
+                                <div class="forgot-password">
+                                    <a onclick="CE.ShowMessageForgotPassword()">@GlobalizationController.GetInstance().GetString("Forgot your password?")</a>
+                                </div> 
+                            </td>
+                        </tr>
+                    </table> 
+                }
+            </div>
+        </div>
+        @Html.Partial("~/Views/Shared/_Copyright.cshtml")
+    </div>
+</div>
