@@ -281,6 +281,7 @@
     <Compile Include="App_Start\GlobalizationConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ConfiguracaoController.cs" />
+    <Compile Include="Controllers\EscolaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Helpers\Authentication.cs" />
@@ -307,16 +308,21 @@
     <Compile Include="Models\Configuracao.cs">
       <DependentUpon>CaseElevaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DBFactory.cs" />
     <Compile Include="Models\Escola.cs">
       <DependentUpon>CaseElevaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Idioma.cs">
       <DependentUpon>CaseElevaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SearchModel\EscolaSearchModel.cs" />
     <Compile Include="Models\Turma.cs">
       <DependentUpon>CaseElevaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\EscolaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\EscolaRepository.cs" />
+    <Compile Include="Service\EscolaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -332,6 +338,7 @@
     <Content Include="Views\Shared\_IBoxTools.cshtml" />
     <Content Include="Views\Login\RequiredChangePassword.cshtml" />
     <Content Include="Views\web.config" />
+    <Content Include="Views\Escola\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -341,14 +348,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Helper\" />
-    <Folder Include="Models\PostData\App_LocalResources\" />
-    <Folder Include="Models\PostData\Company\" />
-    <Folder Include="Models\PostData\Home\" />
-    <Folder Include="Models\PostData\Login\" />
-    <Folder Include="Models\PostData\Person\" />
-    <Folder Include="Models\PostData\Position\" />
-    <Folder Include="Models\SearchModel\" />
+    <Folder Include="Models\ViewModel\App_LocalResources\" />
     <Folder Include="Views\Configuracao\" />
   </ItemGroup>
   <ItemGroup>

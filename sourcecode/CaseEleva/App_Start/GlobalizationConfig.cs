@@ -1,4 +1,5 @@
 ﻿using CaseEleva.Helpers;
+using CaseEleva.Models;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
@@ -27,10 +28,8 @@ namespace CaseEleva.App_Start
         public static string GetCurrentLanguage()
         {
             string language;
-            using (Models.CaseElevaEntities context = new Models.CaseElevaEntities())
-            {
-                language = context.Configuracao.SingleOrDefault().Idioma.Identificador;
-            }
+            var context = DBFactory.GetInstance().GetDb();
+            language = context.Configuracao.SingleOrDefault().Idioma.Identificador;
             return language;
         }
     }

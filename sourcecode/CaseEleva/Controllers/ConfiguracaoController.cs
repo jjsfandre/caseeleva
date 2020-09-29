@@ -9,7 +9,7 @@ namespace CaseEleva.Controllers
 
         public ActionResult AlterarIdioma(int idiomaId)
         {
-            using (var context = new CaseElevaEntities())
+            using (var context = DBFactory.GetInstance().GetDb())
             {
                 context.Configuracao.SingleOrDefault().IdiomaId = idiomaId;
                 context.SaveChanges();

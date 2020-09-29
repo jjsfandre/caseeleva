@@ -132,3 +132,22 @@ CE.ShowMessageForgotPassword = function () {
     var text = CE.Helpers.Globalization.GetString("There is no need for authentication data at this time. Just click \"Login\"!");
     CE.Alert.Info(title, text);
 }
+
+CE.LoadPageMenu = function (cfg) {
+    CE.Request({
+        Controller: cfg.Controller,
+        Action: cfg.Action,
+        Method: 'GET',
+        Delay: 200,
+        Mask: {
+            Title: CE.Helpers.Globalization.GetString('Wait'),
+            Message: CE.Helpers.Globalization.GetString('Loading page...')
+        },
+        JSONResponse: false,
+        Params: cfg.Params,
+        Success: function (resp) {
+            $('#contents-page').html(resp)
+        }
+    })
+}
+

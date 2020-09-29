@@ -28,7 +28,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-institution"></i> <span class="nav-label">@GlobalizationController.GetInstance().GetString("Schools")</span></a>
+                    <a onclick="CE.LoadPageMenu({
+                        Controller: 'Escola',
+                        Action: 'Index'
+                    });"><i class="fa fa-institution"></i> <span class="nav-label">@GlobalizationController.GetInstance().GetString("Schools")</span></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-gears"></i> <span class="nav-label">@GlobalizationController.GetInstance().GetString("Settings")</span><span class="fa arrow"></span></a>

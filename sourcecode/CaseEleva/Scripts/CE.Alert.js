@@ -52,7 +52,7 @@ CE.Alert.Info = function (title, text, events) {
 
 CE.Alert.CurrentLoadingAlert = null;
 CE.Alert.ShowLoading = function (title, message) {
-    return AP.Alert.CurrentLoadingAlert = AP.Alert.CreateAlert({
+    return CE.Alert.CurrentLoadingAlert = CE.Alert.CreateAlert({
         Id: 'default-loading-alert',
         SweetAlert: {
             title: title,
@@ -66,6 +66,6 @@ CE.Alert.ShowLoading = function (title, message) {
 
 CE.Alert.CloseLoading = function () {
     if (CE.Alert.CurrentLoadingAlert)
-        CE.Alert.CurrentLoadingAlert.close()
+        CE.Alert.CloseAlert();
 }
 
