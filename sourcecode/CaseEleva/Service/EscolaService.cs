@@ -35,8 +35,5 @@ namespace CaseEleva.Service
             }).ToList();
         }
 
-        
-
-
     }
 }
