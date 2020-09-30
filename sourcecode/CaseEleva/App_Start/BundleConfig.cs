@@ -41,6 +41,7 @@ namespace CaseEleva
                    .Include("~/Content/Resources/pe-icon-set-social-people.min.css", cssRewriter)
                    .Include("~/Content/Resources/pe-icon-set-media.min.css", cssRewriter)
                    .Include("~/Content/Resources/pe-icon-7-stroke.min.css", cssRewriter)
+                   .Include("~/Content/Resources/Components.css", cssRewriter)
             );
 
             bundles.Add(new StyleBundle("~/Bundle/Styles/CaseEleva").IncludeDirectory("~/Content", "*.css"));

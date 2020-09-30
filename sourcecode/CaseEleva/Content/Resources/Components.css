@@ -1,0 +1,241 @@
+﻿/** EW - Button **/
+.EW-Button .icon {
+    margin-right: 10px;
+}
+
+/** EW - Window **/
+.EW-Window .EW-Window-Table,
+.EW-Window .EW-Window-Table .td-body,
+.EW-Window .EW-Window-Table .td-body .modal-body {
+    width: 100%;
+    height: 100%;
+}
+
+    .EW-Window .EW-Window-Table .td-body .modal-body {
+        padding: 10px;
+    }
+
+.EW-Window .modal-dialog {
+    position: relative;
+    top: 0;
+}
+
+.EW-Window .EW-Window-Table .modal-header {
+    padding: 10px;
+}
+
+    .EW-Window .EW-Window-Table .modal-header .modal-title {
+        text-align: left;
+        font-size: 22px;
+        margin-left: 20px;
+    }
+
+/** EW - Grid **/
+.EW-Grid .EW-Grid-Table {
+    width: 100%;
+    height: 100%;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.EW-Grid .top-bar {
+    height: 55px;
+    padding: 10px;
+    border-top: none;
+}
+
+.EW-Grid .ui-jqgrid .ui-jqgrid-btable tbody tr.jqgrow.ui-state-highlight {
+    background-color: #1ab394;
+    border: #22927b;
+    color: #ffffff;
+}
+
+    .EW-Grid .ui-jqgrid .ui-jqgrid-btable tbody tr.jqgrow.ui-state-highlight .jqgrid-rownum {
+        color: #ffffff;
+    }
+
+.EW-Grid .ui-jqgrid .ui-jqgrid-btable tbody tr.jqgrow {
+    font-size: 14px;
+    color: #505050;
+}
+
+.EW-Grid .top-bar .ui-jqgrid .ui-jqgrid-view input, .ui-jqgrid .ui-jqgrid-view select, .ui-jqgrid .ui-jqgrid-view textarea, .ui-jqgrid .ui-jqgrid-view button,
+.EW-Grid .bottom-bar .ui-jqgrid .ui-jqgrid-view input, .ui-jqgrid .ui-jqgrid-view select, .ui-jqgrid .ui-jqgrid-view textarea, .ui-jqgrid .ui-jqgrid-view button {
+    font-size: 13px;
+}
+
+.EW-Grid .bottom-bar {
+    padding: 10px;
+    height: 55px;
+}
+
+.EW-Grid .ui-jqgrid .ui-jqgrid-sortable {
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.EW-Grid .ui-priority-secondary {
+    background-color: #e8e8e8;
+    opacity: 1.0;
+}
+
+.EW-Grid .ui-state-hover,
+.EW-Grid .ui-widget-content .ui-state-hover,
+.EW-Grid .ui-widget-header .ui-state-hover,
+.EW-Grid .ui-state-focus,
+.EW-Grid .ui-widget-content .ui-state-focus,
+.EW-Grid .ui-widget-header .ui-state-focus {
+    border: #dadada;
+}
+
+.EW-Grid .EW-Icon {
+    text-align: center;
+}
+
+.EW-Grid .EW-Boolean-Icon {
+    text-align: center;
+}
+
+    .EW-Grid .EW-Boolean-Icon .fa-check {
+        color: #0b846b;
+    }
+
+    .EW-Grid .EW-Boolean-Icon .fa-times {
+        color: #c73333;
+    }
+
+/*-- EW - CrudModel --*/
+.EW-CrudModel-btn-new,
+.EW-CrudModel-btn-edit,
+.EW-CrudModel-btn-remove {
+    margin-right: 10px;
+}
+
+span[data-valmsg-for] {
+    visibility: hidden;
+    color: #ED5565;
+}
+
+.EW-CrudModel-required-input-error {
+    border: 1px dotted #cc5965;
+}
+
+/*-- EW - SimpleSideMenu --*/
+.EW-SimpleSideMenu {
+    height: 100%;
+    background-color: #1ab394;
+    position: relative;
+    width: 100%;
+    min-width: 70px;
+}
+
+    .EW-SimpleSideMenu li {
+        min-height: 60px;
+        padding: 10px 10px 10px 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .EW-SimpleSideMenu.navbar-default .nav > li > a:hover,
+    .EW-SimpleSideMenu.navbar-default .nav > li > a:focus {
+        background: none;
+    }
+
+    .EW-SimpleSideMenu li:hover,
+    .EW-SimpleSideMenu li:focus {
+        background: #2ea28b;
+    }
+
+    .EW-SimpleSideMenu li.active {
+        border-left: 4px solid rgb(26, 179, 148);
+        background: #197764;
+        margin-right: 0px;
+    }
+
+    .EW-SimpleSideMenu.navbar-static-side a {
+        color: white;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .EW-SimpleSideMenu.navbar-static-side i {
+        margin: 0;
+    }
+
+    .EW-SimpleSideMenu i {
+        margin: 0px;
+    }
+
+    .EW-SimpleSideMenu div.item-text {
+        font-size: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+
+/*-- EW - Spin --*/
+.EW-Spin .EW-Spin-Prefix,
+.EW-Spin .EW-Spin-Posfix {
+    display: none;
+}
+
+/*-- EW - Panel --*/
+.EW-Panel {
+    height: 100%;
+    overflow: hidden;
+}
+
+    .EW-Panel .ibox-title {
+        min-height: 50px;
+    }
+
+    .EW-Panel .ibox-title-text {
+        font-weight: 600;
+        font-size: 17px;
+    }
+
+    .EW-Panel .ibox-content {
+        overflow: auto;
+    }
+
+/*-- EW - Pagination --*/
+.EW-Pagination .current-page {
+    color: #676a6c;
+}
+
+    .EW-Pagination .current-page:hover {
+        color: #000000;
+    }
+
+.EW-Pagination .page {
+    display: none;
+}
+
+.EW-Pagination .selected-page {
+    display: block;
+}
+
+.EW-Pagination div[style-page="last"] a.previous-page:hover {
+    color: #5a5a5a;
+}
+
+.EW-Pagination div[style-page="last"] a.next-page {
+    cursor: not-allowed;
+}
+
+.EW-Pagination div[style-page="middle"] a.previous-page:hover,
+.EW-Pagination div[style-page="middle"] a.next-page:hover {
+    color: #5a5a5a;
+}
+
+.EW-Pagination div[style-page="unique"] a.previous-page,
+.EW-Pagination div[style-page="unique"] a.next-page {
+    cursor: not-allowed;
+}
+
+.EW-Pagination div[style-page="first"] a.next-page:hover {
+    color: #5a5a5a;
+}
+
+.EW-Pagination div[style-page="first"] a.previous-page {
+    cursor: not-allowed;
+}

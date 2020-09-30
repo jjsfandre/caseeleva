@@ -142,6 +142,7 @@
     <Content Include="Content\Resources\Chosen\chosen-sprite%402x.png" />
     <Content Include="Content\Resources\Chosen\chosen-sprite.png" />
     <Content Include="Content\Resources\Chosen\chosen.css" />
+    <Content Include="Content\Resources\Components.css" />
     <Content Include="Content\Resources\cropper.min.css" />
     <Content Include="Content\Resources\datepicker3.css" />
     <Content Include="Content\Resources\font-awesome.min.css" />
@@ -245,6 +246,7 @@
     </Content>
     <None Include="Scripts\Resources\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\CE.Alert.js" />
+    <Content Include="Scripts\CE.Escola.js" />
     <Content Include="Scripts\Helpers\CE.Helpers.Globalization.js" />
     <Content Include="Scripts\Helpers\CE.Helpers.js" />
     <Content Include="Scripts\Resources\bootstrap-datepicker.js" />
@@ -319,6 +321,8 @@
     <Compile Include="Models\Turma.cs">
       <DependentUpon>CaseElevaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\AssociationViewModel.cs" />
+    <Compile Include="Models\ViewModel\BaseViewModel.cs" />
     <Compile Include="Models\ViewModel\EscolaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\EscolaRepository.cs" />

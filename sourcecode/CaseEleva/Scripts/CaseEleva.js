@@ -151,3 +151,16 @@ CE.LoadPageMenu = function (cfg) {
     })
 }
 
+
+CE.SerializeFormFilter = function (div) {
+    var param = {
+        searchModel: {}
+    }
+    div.find('input, select').each(function (index, item) {
+        item = $(item);
+        if (typeof (item.attr('id')) == 'undefined')
+            return;
+        param.searchModel[item.attr('id')] = item.val();
+    });
+    return param;
+}

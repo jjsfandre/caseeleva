@@ -1296,4 +1296,19 @@
   <data name="Schools" xml:space="preserve">
     <value>Escolas</value>
   </data>
+  <data name="City" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Complement" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Public place" xml:space="preserve">
+    <value>Logradouro</value>
+  </data>
+  <data name="School principal" xml:space="preserve">
+    <value>Diretor</value>
+  </data>
 </root>

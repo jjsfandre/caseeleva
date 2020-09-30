@@ -157,4 +157,25 @@ input[type=checkbox], input[type=radio]{
 .chosen-container-active .chosen-choices {
     border: 1px solid #5897fb;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-} 
+}
+
+.CE-Filter-Resume {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.CE-Filter-Resume .col-lg-1, .CE-Filter-Resume .col-lg-10, .CE-Filter-Resume .col-lg-11, .CE-Filter-Resume .col-lg-12, .CE-Filter-Resume .col-lg-2, .CE-Filter-Resume .col-lg-3, .CE-Filter-Resume .col-lg-4, .CE-Filter-Resume .col-lg-5, .CE-Filter-Resume .col-lg-6, .CE-Filter-Resume .col-lg-7, .CE-Filter-Resume .col-lg-8, .CE-Filter-Resume .col-lg-9, .CE-Filter-Resume .col-md-1, .CE-Filter-Resume .col-md-10, .CE-Filter-Resume .col-md-11, .CE-Filter-Resume .col-md-12, .CE-Filter-Resume .col-md-2, .CE-Filter-Resume .col-md-3, .CE-Filter-Resume .col-md-4, .CE-Filter-Resume .col-md-5, .CE-Filter-Resume .col-md-6, .CE-Filter-Resume .col-md-7, .CE-Filter-Resume .col-md-8, .CE-Filter-Resume .col-md-9, .CE-Filter-Resume .col-sm-1, .CE-Filter-Resume .col-sm-10, .CE-Filter-Resume .col-sm-11, .CE-Filter-Resume .col-sm-12, .CE-Filter-Resume .col-sm-2, .CE-Filter-Resume .col-sm-3, .CE-Filter-Resume .col-sm-4, .CE-Filter-Resume .col-sm-5, .CE-Filter-Resume .col-sm-6, .CE-Filter-Resume .col-sm-7, .CE-Filter-Resume .col-sm-8, .CE-Filter-Resume .col-sm-9, .CE-Filter-Resume .col-xs-1, .CE-Filter-Resume .col-xs-10, .CE-Filter-Resume .col-xs-11, .CE-Filter-Resume .col-xs-12, .CE-Filter-Resume .col-xs-2, .CE-Filter-Resume .col-xs-3, .CE-Filter-Resume .col-xs-4, .CE-Filter-Resume .col-xs-5, .CE-Filter-Resume .col-xs-6, .CE-Filter-Resume .col-xs-7, .CE-Filter-Resume .col-xs-8, .CE-Filter-Resume .col-xs-9 {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+
+.btn-resume-filter {
+    float: right;
+    margin-top: 15px;
+}
+
+.page-heading{
+    margin-left: 0;
+    margin-right: 0;
+}
