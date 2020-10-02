@@ -19,6 +19,7 @@ namespace CaseEleva.Models
         public string Professor { get; set; }
         public int TotalAlunos { get; set; }
         public string Descricao { get; set; }
+        public string Codigo { get; set; }
     
         public virtual Escola Escola { get; set; }
     }

@@ -41,9 +41,10 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EscolaId" Type="int" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="70" />
           <Property Name="Professor" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="TotalAlunos" Type="int" Nullable="false" />
-          <Property Name="Descricao" Type="varchar(max)" Nullable="false" />
+          <Property Name="Descricao" Type="varchar(max)" />
         </EntityType>
         <Association Name="Configuracao_Idioma_FK">
           <End Role="Idioma" Type="Self.Idioma" Multiplicity="1" />
@@ -124,8 +125,9 @@
           <Property Name="EscolaId" Type="Int32" Nullable="false" />
           <Property Name="Professor" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
           <Property Name="TotalAlunos" Type="Int32" Nullable="false" />
-          <Property Name="Descricao" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Escola" Relationship="CaseElevaModel.Turma_Escola_FK" FromRole="Turma" ToRole="Escola" />
+          <Property Name="Codigo" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="Turma_Escola_FK">
           <End Type="CaseElevaModel.Escola" Role="Escola" Multiplicity="1" />
@@ -193,6 +195,7 @@
           <EntitySetMapping Name="Turma">
             <EntityTypeMapping TypeName="CaseElevaModel.Turma">
               <MappingFragment StoreEntitySet="Turma">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
                 <ScalarProperty Name="Descricao" ColumnName="Descricao" />
                 <ScalarProperty Name="TotalAlunos" ColumnName="TotalAlunos" />
                 <ScalarProperty Name="Professor" ColumnName="Professor" />

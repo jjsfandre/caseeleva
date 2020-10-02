@@ -20,12 +20,14 @@ CREATE TABLE [dbo].[Escola](
 
 GO
 
+
 CREATE TABLE [dbo].[Turma](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[EscolaId] [int] NOT NULL,
+	[Codigo] [varchar](70) NULL,
 	[Professor] [varchar](70) NOT NULL,
 	[TotalAlunos] [int] NOT NULL,
-	[Descricao] [varchar](max) NOT NULL,
+	[Descricao] [varchar](max) NULL,
  CONSTRAINT [Turma_Id_PK] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

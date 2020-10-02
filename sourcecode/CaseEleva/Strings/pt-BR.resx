@@ -1341,4 +1341,13 @@
   <data name="The field '{0}' is required." xml:space="preserve">
     <value>O campo '{0}' é obrigatório.</value>
   </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Teacher" xml:space="preserve">
+    <value>Professor</value>
+  </data>
+  <data name="Total students" xml:space="preserve">
+    <value>Total de alunos</value>
+  </data>
 </root>
