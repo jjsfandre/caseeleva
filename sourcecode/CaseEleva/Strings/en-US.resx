@@ -1311,4 +1311,22 @@
   <data name="School principal" xml:space="preserve">
     <value>School principal</value>
   </data>
+  <data name="Classes" xml:space="preserve">
+    <value>Classes</value>
+  </data>
+  <data name="If there are classes linked to the selected schools, they will also be excluded. Do you wish to continue?" xml:space="preserve">
+    <value>If there are classes linked to the selected schools, they will also be excluded. Do you wish to continue?</value>
+  </data>
+  <data name="No schools selected." xml:space="preserve">
+    <value>No schools selected.</value>
+  </data>
+  <data name="Select one or more schools to exclude." xml:space="preserve">
+    <value>Select one or more schools to exclude.</value>
+  </data>
+  <data name="Select only one school to edit." xml:space="preserve">
+    <value>Select only one school to edit.</value>
+  </data>
+  <data name="Select only one school to list classes." xml:space="preserve">
+    <value>Select only one school to list classes.</value>
+  </data>
 </root>

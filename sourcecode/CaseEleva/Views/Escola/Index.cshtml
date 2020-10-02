@@ -57,13 +57,13 @@
         <button type="button" id="crudmodel-escola-grid-resume-remove" class="btn btn-w-m btn-danger EW-Button " onclick="CE.Escola.Delete()">
             <i class="icon fa fa-trash"></i><span class="">@GlobalizationController.GetInstance().GetString("Remove")</span>
         </button>
-        <button type="button" id="crudmodel-escola-grid-resume-remove" class="btn btn-w-m btn-danger EW-Button " onclick="CE.Escola.Turmas()">
-            <i class="icon fa fa-trash"></i><span class="">@GlobalizationController.GetInstance().GetString("Remove")</span>
+        <button type="button" id="crudmodel-escola-grid-resume-remove" class="btn btn-w-m btn-primary EW-Button " onclick="CE.Escola.Turmas()">
+            <i class="icon fa fa-graduation-cap"></i><span class="">@GlobalizationController.GetInstance().GetString("Classes")</span>
         </button>
     </div>
     <div class="ibox-content">
         <div class="table-responsive">
-            <table class="table table-striped">
+            <table class="table table-striped" id="crudmodel-escola-grid-resume">
                 <thead>
                     <tr>
 
@@ -81,7 +81,7 @@
                     @foreach (var escola in Model.Objects)
                     {
                         <tr>
-                            <td><input type="checkbox" class="i-checks" name="check-id-@escola.Id"></td>
+                            <td><input type="checkbox" class="i-checks" id_grid="@escola.Id" name="check-id-@escola.Id"></td>
                             <td>@escola.Nome</td>
                             <td>@escola.Diretor</td>
                             <td>@escola.Logradouro</td>

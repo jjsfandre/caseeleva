@@ -29,7 +29,7 @@ namespace CaseEleva.Controllers
         public ActionResult Detail(int? id)
         {
             if (!id.HasValue)
-                throw new ArgumentNullException(nameof(id));
+                return View();
 
             var viewModel = this.EscolaService.GetById(id.Value);
 
@@ -44,6 +44,13 @@ namespace CaseEleva.Controllers
                 return RedirectToAction("Index", "Escola");
 
             return View("Index");
+        }
+
+        public ActionResult Delete(int[] ids)
+        {
+            this.EscolaService.Delete(ids);
+
+            return RedirectToAction("Index", "Escola");
         }
 
     }

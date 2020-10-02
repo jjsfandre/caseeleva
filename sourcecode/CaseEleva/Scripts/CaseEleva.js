@@ -19,7 +19,7 @@ CE.LoadPage = function (config) {
     } else {
         var url = config.Area != null ? config.Area + "/" : "";
         url = config.Controller != null ? url + config.Controller + "/" : url;
-        url = config.Action != null ? url + config.Action + "/" : url;
+        url = config.Action != null ? url + config.Action  : url;
         url = location.protocol + "//" + location.host + "/" + url;
     }
     var serializedParams = "";
@@ -149,4 +149,16 @@ CE.SerializeFormFilter = function (div) {
         param.searchModel[item.attr('id')] = item.val();
     });
     return param;
+}
+
+
+CE.GetSelectedIdsFromGrid = function (grid) {
+
+    var paramsResult = [];
+
+    grid.find('.i-checks:checked').each(function (index, el) {
+        var id = $(el).attr('id_grid');
+        paramsResult.push(id);
+    });
+    return paramsResult;
 }

@@ -1,5 +1,6 @@
 ﻿using CaseEleva.Models;
 using CaseEleva.Models.ViewModel;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CaseEleva.Repository
@@ -54,6 +55,23 @@ namespace CaseEleva.Repository
                 context = DBFactory.GetInstance().GetDb();
 
             return context.Escola.FirstOrDefault(x => x.Id == id);
+        }
+
+        public List<Escola> GetByIds(int[] ids, CaseElevaEntities context = null)
+        {
+            if (context == null)
+                context = DBFactory.GetInstance().GetDb();
+
+            return context.Escola.Where(x => ids.Contains(x.Id)).ToList();
+        }
+
+        public void DeleteByIds(int[] ids)
+        {
+            var context = DBFactory.GetInstance().GetDb();
+            List<Escola> escolas = GetByIds(ids, context);
+            context.Escola.RemoveRange(escolas);
+            context.SaveChanges();
+
         }
     }
 }

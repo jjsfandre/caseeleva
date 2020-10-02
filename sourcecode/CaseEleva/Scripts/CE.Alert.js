@@ -9,7 +9,7 @@ CE.Alert.CreateAlert = function (config) {
     config.SweetAlert.cancelButtonColor = config.SweetAlert.cancelButtonColor || '#aaa';
 
 
-    return window.swal(config.SweetAlert);
+    return window.swal(config.SweetAlert).then(config.Events.Confirm, config.Events.Cancel);
 }
 
 CE.Alert.CloseAlert = function (config) {
@@ -68,4 +68,28 @@ CE.Alert.CloseLoading = function () {
     if (CE.Alert.CurrentLoadingAlert)
         CE.Alert.CloseAlert();
 }
+
+
+CE.Alert.Question = function (params) {
+
+    var title = params.Title || CE.Helpers.Globalization.GetString("Attention!");
+    CE.Alert.CreateAlert({
+        Id: 'alert-error',
+        Events: {
+            Confirm: params.Events ? params.Events.Confirm : false,
+            Cancel: params.Events ? params.Events.Cancel : false,
+        },
+        SweetAlert: {
+            title: title,
+            text: params.Text,
+            onSuccess: function () { },
+            allowOutsideClick: false,
+            type: "question",
+            confirmButtonText: params.ConfirmButtonText,
+            confirmButtonText: params.CancelButtonText,
+            showCancelButton: true
+        }
+    })
+}
+
 

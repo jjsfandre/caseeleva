@@ -57,7 +57,6 @@ namespace CaseEleva.Service
             
 
             return Filter(escolas, searchModel).Select(selectClauseEscola).ToList(); 
-            return Filter(escolas, searchModel).Select(selectClauseEscola).ToList(); 
         }
 
         public EscolaViewModel GetById(int id)
@@ -74,6 +73,11 @@ namespace CaseEleva.Service
                 return;
 
             EscolaRepository.Save(formModel);
+        }
+
+        public void Delete(int[] ids)
+        {
+            EscolaRepository.DeleteByIds(ids);
         }
 
         private bool ValidateSave(EscolaViewModel formModel)
