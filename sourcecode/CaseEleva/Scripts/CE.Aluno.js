@@ -106,7 +106,7 @@ CE.Aluno.Alunos = function () {
     })
 }
 
-CE.Aluno.Setup = function () {
+CE.Aluno.Setup = function (model) {
     $("#EscolaId").change(function (event, a, b) {
         CE.Aluno.AtualizaComboTurmas($(event.target), $('#TurmaId'));
     });
@@ -126,9 +126,11 @@ CE.Aluno.AtualizaComboTurmas = function (fieldEscola, fieldTurma) {
         Delay: 200,
         Success: function (response) {
             if (response.Success) {
-                fieldTurma.children('option[typeoption="custom"]').remove();
+                var placeholder = fieldTurma.attr('placeholder');
+                fieldTurma.children('option').remove();
+                fieldTurma.append('<option>' + placeholder + '</option>');
                 response.Turmas.forEach(function (turma) {
-                    fieldTurma.append('<option typeoption="custom" value="' + turma.Id + '">' + turma.Codigo + '</option>');
+                    fieldTurma.append('<option value="' + turma.Id + '">' + turma.Codigo + '</option>');
                 });
 
                 fieldTurma.trigger("chosen:updated");

@@ -47,10 +47,10 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6 ">
-                                @Html.DropDownList("EscolaId", new SelectList(@ViewBag.Escolas, "Id", "Nome"), GlobalizationController.GetInstance().GetString("Select a school"), htmlAttributes: new { @class = "chosen-select form-control text-box single-line" })
+                                @Html.DropDownListFor(model => model.EscolaId, new SelectList(@ViewBag.Escolas, "Id", "Nome"), GlobalizationController.GetInstance().GetString("Select a school"), htmlAttributes: new { @class = "chosen-select form-control text-box single-line" })
                             </div>
                             <div class="col-lg-6 ">
-                                @Html.DropDownListFor(model => model.TurmaId, new SelectList(Enumerable.Empty<SelectListItem>()), GlobalizationController.GetInstance().GetString("Select a school and then select a class"), htmlAttributes: new { @class = "chosen-select form-control text-box single-line" })
+                                @Html.DropDownListFor(model => model.TurmaId, new SelectList(@ViewBag.Turmas, "Id", "Codigo"), GlobalizationController.GetInstance().GetString("Select a school and then select a class"), htmlAttributes: new { placeholder = GlobalizationController.GetInstance().GetString("Select a school and then select a class"), @class = "chosen-select form-control text-box single-line" })
                             </div>
                         </div>
                     </div>

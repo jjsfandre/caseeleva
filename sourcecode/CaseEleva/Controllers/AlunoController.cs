@@ -30,6 +30,12 @@ namespace CaseEleva.Controllers
 
             var viewModel = this.AlunoService.GetAssociationViewModel(searchModel);
             ViewBag.Escolas = EscolaRepository.GetAll().ToList();
+            if (searchModel.TurmaId.HasValue)
+                viewModel.SearchModel.EscolaId = TurmaRepository.GetById(searchModel.TurmaId.Value).EscolaId;
+            if (viewModel.SearchModel.EscolaId.HasValue)
+                ViewBag.Turmas = TurmaRepository.GetByEscolaIds(new int[] { viewModel.SearchModel.EscolaId.Value }).ToList();
+            else
+                ViewBag.Turmas = Enumerable.Empty<SelectListItem>();
 
             return View(viewModel);
         }
@@ -38,10 +44,12 @@ namespace CaseEleva.Controllers
         {
 
             ViewBag.Escolas = EscolaRepository.GetAll().ToList();
+            ViewBag.Turmas = Enumerable.Empty<SelectListItem>();
             if (!id.HasValue)
                 return View(new AlunoViewModel());
-
+                
             var viewModel = this.AlunoService.GetById(id.Value);
+            ViewBag.Turmas = TurmaRepository.GetByEscolaIds(new int[] { viewModel.Turma.EscolaId }).ToList();
 
             return View(viewModel);
         }
@@ -68,15 +76,16 @@ namespace CaseEleva.Controllers
 
         public JsonResult GetTurmasByEscolaId(int? EscolaId)
         {
+            var turmas = new List<TurmaViewModel>();
             if (!EscolaId.HasValue)
-                throw new ArgumentNullException(nameof(EscolaId));
+                return Json(new { Success = true, Turmas = turmas }, JsonRequestBehavior.AllowGet);
 
             int[] ids = { EscolaId.Value };
 
-            var turmas = TurmaRepository.GetByEscolaIds(ids).Select(escola => new TurmaViewModel {
+            turmas = TurmaRepository.GetByEscolaIds(ids).Select(escola => new TurmaViewModel {
                 Id = escola.Id,
                 Codigo =  escola.Codigo
-            });
+            }).ToList();
 
             return Json(new { Success = true, Turmas = turmas },JsonRequestBehavior.AllowGet);
         }

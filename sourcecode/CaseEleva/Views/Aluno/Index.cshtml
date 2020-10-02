@@ -4,7 +4,7 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>@GlobalizationController.GetInstance().GetString("Classes")</h2>
+        <h2>@GlobalizationController.GetInstance().GetString("Students")</h2>
     </div>
 </div>
 
@@ -35,7 +35,7 @@
                         @Html.DropDownListFor(model => model.SearchModel.EscolaId, new SelectList(@ViewBag.Escolas, "Id", "Nome"), GlobalizationController.GetInstance().GetString("Select a school"), htmlAttributes: new { id = "EscolaId", @class = "chosen-select form-control text-box single-line" })
                     </div>
                     <div class="col-lg-3 ">
-                        @Html.DropDownListFor(model => model.SearchModel.TurmaId, new SelectList(Enumerable.Empty<SelectListItem>()), GlobalizationController.GetInstance().GetString("Select a school and then select a class"), htmlAttributes: new { id = "TurmaId", @class = "chosen-select form-control text-box single-line" })
+                        @Html.DropDownListFor(model => model.SearchModel.TurmaId, new SelectList(@ViewBag.Turmas, "Id", "Codigo"), GlobalizationController.GetInstance().GetString("Select a school and then select a class"), htmlAttributes: new { placeholder = GlobalizationController.GetInstance().GetString("Select a school and then select a class"), id = "TurmaId", @class = "chosen-select form-control text-box single-line" })
                     </div>
                     <div class="col-lg-3 ">
                         @Html.TextBoxFor(model => model.SearchModel.Email, new { id = "Email", @class = "form-control text-box single-line" })

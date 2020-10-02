@@ -19,6 +19,7 @@ namespace CaseEleva.Service
         {
                 Id = Aluno.Id,
                 TurmaId = Aluno.TurmaId,
+                EscolaId = Aluno.Turma.EscolaId,
                 Turma = Aluno.Turma,
                 Nome = Aluno.Nome,
                 Email = Aluno.Email,
