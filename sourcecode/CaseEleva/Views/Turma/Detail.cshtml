@@ -45,12 +45,12 @@
                                 @Html.TextBoxFor(model => model.TotalAlunos, new { @type = "number", @class = "form-control text-box single-line " })
                             </div>
                             <div class="col-lg-9 ">
-                                @Html.TextBoxFor(model => model.EscolaId, new {  @class = "form-control text-box single-line" })
+                                @Html.DropDownListFor(model => model.EscolaId, new SelectList(@ViewBag.Escolas, "Id", "Nome"), GlobalizationController.GetInstance().GetString("Select a school"), htmlAttributes: new { @class = "chosen-select form-control text-box single-line" })
                             </div>
                         </div>
 
                         <div class="row row-label">
-                            @Html.LabelFor(model => model.Descricao, GlobalizationController.GetInstance().GetString("Description"), htmlAttributes: new { @class = "col-lg-12 required-symbol" })
+                            @Html.LabelFor(model => model.Descricao, GlobalizationController.GetInstance().GetString("Description"), htmlAttributes: new { @class = "col-lg-12" })
                         </div>
                         <div class="row">
                             <div class="col-lg-12 ">

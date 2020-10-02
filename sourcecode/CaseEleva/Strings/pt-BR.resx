@@ -1350,8 +1350,14 @@
   <data name="No class selected." xml:space="preserve">
     <value>Nenhuma turma selecionada.</value>
   </data>
+  <data name="Oops, nothing found!" xml:space="preserve">
+    <value>Oops, nada encontrado!</value>
+  </data>
   <data name="School" xml:space="preserve">
     <value>Escola</value>
+  </data>
+  <data name="Select a school" xml:space="preserve">
+    <value>Selecione uma escola</value>
   </data>
   <data name="Select one or more classes to exclude." xml:space="preserve">
     <value>Selecione uma ou mais turmas para excluir.</value>

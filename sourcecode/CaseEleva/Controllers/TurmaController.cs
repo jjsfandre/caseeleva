@@ -1,7 +1,9 @@
 ﻿using CaseEleva.Models.SearchModel;
 using CaseEleva.Models.ViewModel;
+using CaseEleva.Repository;
 using CaseEleva.Service;
 using System;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace CaseEleva.Controllers
@@ -10,10 +12,12 @@ namespace CaseEleva.Controllers
     {
 
         private readonly TurmaService TurmaService;
+        private readonly EscolaRepository EscolaRepository;
 
         public TurmaController()
         {
             TurmaService = TurmaService.GetInstance();
+            EscolaRepository = EscolaRepository.GetInstance();
         }
 
 
@@ -22,12 +26,15 @@ namespace CaseEleva.Controllers
         {
 
             var viewModel = this.TurmaService.GetAssociationViewModel(searchModel);
+            ViewBag.Escolas = EscolaRepository.GetAll().ToList();
 
             return View(viewModel);
         }
 
         public ActionResult Detail(int? id)
         {
+
+            ViewBag.Escolas = EscolaRepository.GetAll().ToList();
             if (!id.HasValue)
                 return View(new TurmaViewModel());
 
@@ -44,6 +51,7 @@ namespace CaseEleva.Controllers
             if (formModel.StatusOperation)
                 return RedirectToAction("Index", "Turma");
 
+            ViewBag.Escolas = EscolaRepository.GetAll().ToList();
             ViewBag.ValidationFields = Json(new { formModel.StatusOperation, formModel.FieldsWithError, formModel.StatusMessage });
             return View("Detail",formModel);
         }

@@ -399,6 +399,7 @@ textarea {
     }
 
 
-.has-error .form-control {
-    background-color: #ffdddd;
+.has-error .form-control, .has-error .chosen-single {
+    background-color: #ffb2b2!important;
 }
+

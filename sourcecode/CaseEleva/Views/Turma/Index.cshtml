@@ -31,7 +31,7 @@
                         @Html.TextBoxFor(model => model.SearchModel.Codigo,  new {id= "Codigo", @class = "form-control text-box single-line" } )
                     </div>
                     <div class="col-lg-4 ">
-                        @Html.TextBoxFor(model => model.SearchModel.EscolaId,  new { id = "EscolaId", @class = "form-control text-box single-line" } )
+                        @Html.DropDownListFor(model => model.SearchModel.EscolaId, new SelectList(@ViewBag.Escolas,"Id","Nome"), GlobalizationController.GetInstance().GetString("Select a school"), htmlAttributes: new { id = "EscolaId", @class = "chosen-select form-control text-box single-line" })
                     </div>
                     <div class="col-lg-4 ">
                         @Html.TextBoxFor(model => model.SearchModel.Professor,  new { id = "Professor", @class = "form-control text-box single-line" } )
