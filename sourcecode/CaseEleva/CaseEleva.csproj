@@ -285,6 +285,7 @@
     <Compile Include="Controllers\ConfiguracaoController.cs" />
     <Compile Include="Controllers\EscolaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IdiomaController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Helpers\Authentication.cs" />
     <Compile Include="Global.asax.cs">
@@ -335,15 +336,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_JavascriptGlobalizationConfig.cshtml" />
-    <Content Include="Views\Login\Forgot.cshtml" />
-    <Content Include="Views\Login\Forgot.mail.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Login\Recovery.cshtml" />
     <Content Include="Views\Shared\_Copyright.cshtml" />
-    <Content Include="Views\Shared\_IBoxTools.cshtml" />
-    <Content Include="Views\Login\RequiredChangePassword.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Views\Escola\Index.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Idioma\GetIdiomas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

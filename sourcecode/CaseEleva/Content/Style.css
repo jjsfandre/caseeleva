@@ -70,6 +70,19 @@ input[type=checkbox], input[type=radio]{
         width: 40px;
         margin-left: -10px;
     }
+    .logo-element-large{
+        position: relative;
+        height: 600px;
+        width: 100%;
+    }
+    .logo-element-large img{        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+    }
 
 
 

@@ -12,7 +12,9 @@
     <script src="https://wchat.freshchat.com/js/widget.js"></script>
 </head>
 <body class="boxed-layout">
+    @Html.Partial("~/Views/Shared/_Header.cshtml")
     @RenderBody()
+    @Html.Partial("~/Views/Shared/_Footer.cshtml")
     @Scripts.Render("~/Bundle/Scripts/Resources")
     @Scripts.Render("~/Bundle/Scripts/CaseEleva")
     @Scripts.Render("~/Bundle/Scripts/CaseEleva/Helpers")

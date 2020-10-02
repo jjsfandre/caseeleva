@@ -1,0 +1,10 @@
+﻿
+@foreach (var idioma in ViewBag.Idiomas)
+{
+    <li>
+        <a href="/Configuracao/AlterarIdioma?idiomaId=@idioma.Id">
+            <img src="/Content/Images/flags/16/@idioma.FlagName" alt="flag" />
+            @idioma.Nome
+        </a>
+    </li>
+}

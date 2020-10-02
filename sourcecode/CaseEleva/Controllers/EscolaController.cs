@@ -23,7 +23,7 @@ namespace CaseEleva.Controllers
 
             var viewModel = this.EscolaService.GetAssociationViewModel(searchModel);
 
-            return PartialView(viewModel);
+            return View(viewModel);
         }
 
         public ActionResult Detail(int? id)
@@ -33,7 +33,7 @@ namespace CaseEleva.Controllers
 
             var viewModel = this.EscolaService.GetById(id.Value);
 
-            return PartialView(viewModel);
+            return View(viewModel);
         }
 
 
@@ -43,7 +43,7 @@ namespace CaseEleva.Controllers
             if (formModel.StatusOperation)
                 return RedirectToAction("Index", "Escola");
 
-            return PartialView("Index");
+            return View("Index");
         }
 
     }
