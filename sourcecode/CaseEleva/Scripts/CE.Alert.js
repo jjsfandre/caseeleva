@@ -17,9 +17,13 @@ CE.Alert.CloseAlert = function (config) {
 }
 
 
-CE.Alert.Error = function (title, text) {
+CE.Alert.Error = function (title, text, events) {
     return CE.Alert.CreateAlert({
         Id: 'alert-error',
+        Events: {
+            Confirm: events ? events.Confirm : false,
+            Cancel: events ? events.Cancel : false,
+        },
         SweetAlert: {
             title: title,
             text: text,

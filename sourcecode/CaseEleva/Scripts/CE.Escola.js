@@ -101,7 +101,7 @@ CE.Escola.OpenDetail = function (isEdit) {
         if (selectedIds.length == 0) {
             messageError = CE.Helpers.Globalization.GetString("No schools selected.");
         } else if (selectedIds.length > 1) {
-            messageError = CE.Helpers.Globalization.GetString("Select only one school to list classes.");
+            messageError = CE.Helpers.Globalization.GetString("Select only one school to edit.");
         }
         if (messageError.length > 0) {
             CE.Alert.Error(messageTitle, messageError);
