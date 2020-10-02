@@ -91,7 +91,5 @@ namespace CaseEleva.Repository
             if (isToSaveContext)
                 context.SaveChanges();
         }
-
-        //TurmaRepository = TurmaRepository.GetInstance();
     }
 }

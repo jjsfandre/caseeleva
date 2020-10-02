@@ -327,6 +327,7 @@
     <Compile Include="Models\Idioma.cs">
       <DependentUpon>CaseElevaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SearchModel\AlunoSearchModel.cs" />
     <Compile Include="Models\SearchModel\TurmaSearchModel.cs" />
     <Compile Include="Models\SearchModel\EscolaSearchModel.cs" />
     <Compile Include="Models\Turma.cs">
@@ -334,11 +335,14 @@
     </Compile>
     <Compile Include="Models\ViewModel\AssociationViewModel.cs" />
     <Compile Include="Models\ViewModel\BaseViewModel.cs" />
+    <Compile Include="Models\ViewModel\AlunoViewModel.cs" />
     <Compile Include="Models\ViewModel\TurmaViewModel.cs" />
     <Compile Include="Models\ViewModel\EscolaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AlunoRepository.cs" />
     <Compile Include="Repository\TurmaRepository.cs" />
     <Compile Include="Repository\EscolaRepository.cs" />
+    <Compile Include="Service\AlunoService.cs" />
     <Compile Include="Service\TurmaService.cs" />
     <Compile Include="Service\EscolaService.cs" />
     <Compile Include="Service\IdiomaService.cs" />
