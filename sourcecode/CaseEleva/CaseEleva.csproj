@@ -356,6 +356,8 @@
     <Content Include="Views\Escola\Detail.cshtml" />
     <Content Include="Views\Turma\Detail.cshtml" />
     <Content Include="Views\Turma\Index.cshtml" />
+    <Content Include="Views\Login\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Eleva Educação - Login</title>
+    <link rel="icon" type="image/png" href="@Url.Content("~/Content/Images/favicon.png")">
+    @Styles.Render("~/Bundle/Styles/Resources")
+    @Styles.Render("~/Bundle/Styles/CaseEleva")
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
+</head>
+<body class="boxed-layout">
+
+    @Scripts.Render("~/Bundle/Scripts/Resources")
+    @Scripts.Render("~/Bundle/Scripts/CaseEleva")
+    @Scripts.Render("~/Bundle/Scripts/CaseEleva/Helpers")
+    @RenderBody()
+    @Html.Partial("~/Views/Shared/_JavascriptConfig.cshtml")
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
