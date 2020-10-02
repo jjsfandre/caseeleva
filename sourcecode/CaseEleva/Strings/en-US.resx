@@ -1314,8 +1314,14 @@
   <data name="Classes" xml:space="preserve">
     <value>Classes</value>
   </data>
+  <data name="Editing" xml:space="preserve">
+    <value>Editing</value>
+  </data>
   <data name="If there are classes linked to the selected schools, they will also be excluded. Do you wish to continue?" xml:space="preserve">
     <value>If there are classes linked to the selected schools, they will also be excluded. Do you wish to continue?</value>
+  </data>
+  <data name="New school" xml:space="preserve">
+    <value>New school</value>
   </data>
   <data name="No schools selected." xml:space="preserve">
     <value>No schools selected.</value>
@@ -1328,5 +1334,11 @@
   </data>
   <data name="Select only one school to list classes." xml:space="preserve">
     <value>Select only one school to list classes.</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="The field '{0}' is required." xml:space="preserve">
+    <value>The field '{0}' is required.</value>
   </data>
 </root>

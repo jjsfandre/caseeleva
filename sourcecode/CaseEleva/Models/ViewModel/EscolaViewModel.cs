@@ -11,5 +11,6 @@
         public string Cidade { get; set; }
         public string Telefone { get; set; }
         public string Diretor { get; set; }
+        public string Estado { get; set; }
     }
 }

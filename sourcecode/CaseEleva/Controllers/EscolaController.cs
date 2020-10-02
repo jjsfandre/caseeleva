@@ -29,7 +29,7 @@ namespace CaseEleva.Controllers
         public ActionResult Detail(int? id)
         {
             if (!id.HasValue)
-                return View();
+                return View(new EscolaViewModel());
 
             var viewModel = this.EscolaService.GetById(id.Value);
 
@@ -40,10 +40,12 @@ namespace CaseEleva.Controllers
         public ActionResult Save(EscolaViewModel formModel)
         {
             this.EscolaService.Save(formModel);
+
             if (formModel.StatusOperation)
                 return RedirectToAction("Index", "Escola");
 
-            return View("Index");
+            ViewBag.ValidationFields = Json(new { formModel.StatusOperation, formModel.FieldsWithError, formModel.StatusMessage });
+            return View("Detail",formModel);
         }
 
         public ActionResult Delete(int[] ids)

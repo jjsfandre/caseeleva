@@ -397,3 +397,8 @@ textarea {
         font-size: 11px;
         font-family: monospace;
     }
+
+
+.has-error .form-control {
+    background-color: #ffdddd;
+}

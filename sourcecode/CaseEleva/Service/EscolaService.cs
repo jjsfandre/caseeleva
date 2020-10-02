@@ -1,10 +1,12 @@
-﻿using CaseEleva.Models;
+﻿using CaseEleva.Helpers;
+using CaseEleva.Models;
 using CaseEleva.Models.SearchModel;
 using CaseEleva.Models.ViewModel;
 using CaseEleva.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace CaseEleva.Service
 {
@@ -23,7 +25,8 @@ namespace CaseEleva.Service
                 Complemento = escola.Complemento,
                 Cidade = escola.Cidade,
                 Telefone = escola.Telefone,
-                Diretor = escola.Diretor
+                Diretor = escola.Diretor,
+                Estado = escola.Estado
             };
 
         private EscolaService() 
@@ -82,7 +85,44 @@ namespace CaseEleva.Service
 
         private bool ValidateSave(EscolaViewModel formModel)
         {
-            return true;
+            formModel.StatusOperation = true;
+            formModel.FieldsWithError.Clear();
+            var messageError =  new List<String>();
+
+            if (String.IsNullOrEmpty(formModel.Nome))
+            {
+                messageError.Add(String.Format(GlobalizationController.GetInstance().GetString("The field '{0}' is required."), GlobalizationController.GetInstance().GetString("Name")));
+                formModel.FieldsWithError.Add(nameof(formModel.Nome));
+            }
+            if (String.IsNullOrEmpty(formModel.Logradouro))
+            {
+                messageError.Add(String.Format(GlobalizationController.GetInstance().GetString("The field '{0}' is required."), GlobalizationController.GetInstance().GetString("Public place")));
+                formModel.FieldsWithError.Add(nameof(formModel.Logradouro));
+            }
+            if (String.IsNullOrEmpty(formModel.Numero))
+            {
+                messageError.Add(String.Format(GlobalizationController.GetInstance().GetString("The field '{0}' is required."), GlobalizationController.GetInstance().GetString("Number")));
+                formModel.FieldsWithError.Add(nameof(formModel.Numero));
+            }
+            if (String.IsNullOrEmpty(formModel.Cidade))
+            {
+                messageError.Add(String.Format(GlobalizationController.GetInstance().GetString("The field '{0}' is required."), GlobalizationController.GetInstance().GetString("City")));
+                formModel.FieldsWithError.Add(nameof(formModel.Cidade));
+            }
+            if (String.IsNullOrEmpty(formModel.Estado))
+            {
+                messageError.Add(String.Format(GlobalizationController.GetInstance().GetString("The field '{0}' is required."), GlobalizationController.GetInstance().GetString("State")));
+                formModel.FieldsWithError.Add(nameof(formModel.Estado));
+            }
+
+            if (messageError.Count > 0)
+            {
+                formModel.StatusMessage = string.Join("<br>",messageError);
+                formModel.StatusOperation = false;
+
+            }
+
+            return formModel.StatusOperation;
         }
         private IQueryable<Escola> Filter(IQueryable<Escola> baseQuery, EscolaSearchModel searchModel)
         {

@@ -26,7 +26,7 @@ CE.Alert.Error = function (title, text, events) {
         },
         SweetAlert: {
             title: title,
-            text: text,
+            html: text,
             onSuccess: function () { },
             allowOutsideClick: false,
             type: "error",
@@ -78,7 +78,7 @@ CE.Alert.Question = function (params) {
 
     var title = params.Title || CE.Helpers.Globalization.GetString("Attention!");
     CE.Alert.CreateAlert({
-        Id: 'alert-error',
+        Id: 'alert-question',
         Events: {
             Confirm: params.Events ? params.Events.Confirm : false,
             Cancel: params.Events ? params.Events.Cancel : false,

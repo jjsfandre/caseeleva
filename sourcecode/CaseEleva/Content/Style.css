@@ -192,3 +192,15 @@ input[type=checkbox], input[type=radio]{
     margin-left: 0;
     margin-right: 0;
 }
+
+.detail-wrapper .ibox-footer {
+    height: 56px;
+}
+
+.detail-wrapper .ibox-footer .EW-Button{
+    margin-right: 5px;
+}
+
+.row-label{
+    margin-top:10px;
+}

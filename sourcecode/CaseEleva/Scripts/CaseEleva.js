@@ -162,3 +162,20 @@ CE.GetSelectedIdsFromGrid = function (grid) {
     });
     return paramsResult;
 }
+
+
+CE.DeadlValidationFields = function (fields) {
+
+    if (!fields)
+        return;
+
+    if (fields.Data.StatusOperation)
+        return;
+
+
+    fields.Data.FieldsWithError.forEach(function (el) {
+        $('#' + el).parent().addClass('has-error')
+    });
+    var messageTitle = CE.Helpers.Globalization.GetString("Ops!");
+    CE.Alert.Error(messageTitle, fields.Data.StatusMessage);
+}

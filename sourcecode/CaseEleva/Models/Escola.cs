@@ -28,6 +28,7 @@ namespace CaseEleva.Models
         public string Cidade { get; set; }
         public string Telefone { get; set; }
         public string Diretor { get; set; }
+        public string Estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Turma> Turma { get; set; }

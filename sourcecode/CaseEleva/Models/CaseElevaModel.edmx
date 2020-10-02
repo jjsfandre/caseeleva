@@ -24,6 +24,7 @@
           <Property Name="Cidade" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="Telefone" Type="varchar" MaxLength="70" />
           <Property Name="Diretor" Type="varchar" MaxLength="70" />
+          <Property Name="Estado" Type="varchar" MaxLength="70" Nullable="false" />
         </EntityType>
         <EntityType Name="Idioma">
           <Key>
@@ -113,6 +114,7 @@
           <Property Name="Telefone" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
           <Property Name="Diretor" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Turma" Relationship="CaseElevaModel.Turma_Escola_FK" FromRole="Escola" ToRole="Turma" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Turma">
           <Key>
@@ -176,6 +178,7 @@
           <EntitySetMapping Name="Escola">
             <EntityTypeMapping TypeName="CaseElevaModel.Escola">
               <MappingFragment StoreEntitySet="Escola">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="Diretor" ColumnName="Diretor" />
                 <ScalarProperty Name="Telefone" ColumnName="Telefone" />
                 <ScalarProperty Name="Cidade" ColumnName="Cidade" />

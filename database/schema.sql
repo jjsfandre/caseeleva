@@ -9,6 +9,7 @@ CREATE TABLE [dbo].[Escola](
 	[Numero] [varchar](70) NOT NULL,
 	[Complemento] [varchar](70) NULL,
 	[Cidade] [varchar](70) NOT NULL,
+	[Estado] [varchar](70) NOT NULL,
 	[Telefone] [varchar](70) NULL,
 	[Diretor] [varchar](70) NULL,
  CONSTRAINT [Escola_Id_PK] PRIMARY KEY CLUSTERED 

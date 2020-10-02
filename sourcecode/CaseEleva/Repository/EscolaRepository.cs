@@ -46,6 +46,7 @@ namespace CaseEleva.Repository
             escola.Complemento = formModel.Complemento;
             escola.Cidade = formModel.Cidade;
             escola.Diretor = formModel.Diretor;
+            escola.Estado = formModel.Estado;
             context.SaveChanges();
         }
 

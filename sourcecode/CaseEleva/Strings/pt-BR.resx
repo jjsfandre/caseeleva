@@ -1329,4 +1329,16 @@
   <data name="Select only one school to list classes." xml:space="preserve">
     <value>Selecione apenas uma escola para listar as turmas.</value>
   </data>
+  <data name="Editing" xml:space="preserve">
+    <value>Editando</value>
+  </data>
+  <data name="New school" xml:space="preserve">
+    <value>Nova escola</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="The field '{0}' is required." xml:space="preserve">
+    <value>O campo '{0}' é obrigatório.</value>
+  </data>
 </root>
