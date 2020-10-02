@@ -22,7 +22,7 @@ namespace CaseEleva.Service
                 Escola = Turma.Escola,
                 Codigo = Turma.Codigo,
                 Professor = Turma.Professor,
-                TotalAlunos = Turma.TotalAlunos,
+                TotalAlunos = Turma.Aluno.Count,
                 Descricao = Turma.Descricao
         };
 

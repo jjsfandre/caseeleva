@@ -26,7 +26,6 @@ CREATE TABLE [dbo].[Turma](
 	[EscolaId] [int] NOT NULL,
 	[Codigo] [varchar](70) NOT NULL,
 	[Professor] [varchar](70) NOT NULL,
-	[TotalAlunos] [int] NOT NULL,
 	[Descricao] [varchar](max) NULL,
  CONSTRAINT [Turma_Id_PK] PRIMARY KEY CLUSTERED 
 (

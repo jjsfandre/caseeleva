@@ -9,8 +9,11 @@ namespace CaseEleva.Repository
     {
 
         private static TurmaRepository _instance;
+        private readonly AlunoRepository AlunoRepository;
 
-        private TurmaRepository() { }
+        private TurmaRepository() {
+            AlunoRepository = AlunoRepository.GetInstance();
+        }
 
         public static TurmaRepository GetInstance()
         {
@@ -42,7 +45,6 @@ namespace CaseEleva.Repository
             Turma.Codigo = formModel.Codigo;
             Turma.EscolaId = formModel.EscolaId.Value;
             Turma.Professor = formModel.Professor;
-            Turma.TotalAlunos = formModel.TotalAlunos.Value;
             Turma.Descricao = formModel.Descricao;
             context.SaveChanges();
         }
@@ -74,10 +76,12 @@ namespace CaseEleva.Repository
         public void DeleteByIds(int[] ids)
         {
             var context = DBFactory.GetInstance().GetDb();
+
+            AlunoRepository.DeleteByTurmaIds(ids, context, false);
+
             List<Turma> Turmas = GetByIds(ids, context);
             context.Turma.RemoveRange(Turmas);
             context.SaveChanges();
-
         }
 
         public void DeleteByEscolaIds(int[] ids, CaseElevaEntities context = null, bool isToSaveContext = true)

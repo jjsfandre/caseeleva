@@ -53,7 +53,6 @@
           <Property Name="EscolaId" Type="int" Nullable="false" />
           <Property Name="Codigo" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="Professor" Type="varchar" MaxLength="70" Nullable="false" />
-          <Property Name="TotalAlunos" Type="int" Nullable="false" />
           <Property Name="Descricao" Type="varchar(max)" />
         </EntityType>
         <Association Name="Aluno_Turma_FK">
@@ -156,7 +155,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="EscolaId" Type="Int32" Nullable="false" />
           <Property Name="Professor" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
-          <Property Name="TotalAlunos" Type="Int32" Nullable="false" />
           <Property Name="Descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Escola" Relationship="CaseElevaModel.Turma_Escola_FK" FromRole="Turma" ToRole="Escola" />
           <Property Name="Codigo" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
@@ -253,7 +251,6 @@
               <MappingFragment StoreEntitySet="Turma">
                 <ScalarProperty Name="Codigo" ColumnName="Codigo" />
                 <ScalarProperty Name="Descricao" ColumnName="Descricao" />
-                <ScalarProperty Name="TotalAlunos" ColumnName="TotalAlunos" />
                 <ScalarProperty Name="Professor" ColumnName="Professor" />
                 <ScalarProperty Name="EscolaId" ColumnName="EscolaId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

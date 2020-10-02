@@ -1371,4 +1371,13 @@
   <data name="Total students" xml:space="preserve">
     <value>Total students</value>
   </data>
+  <data name="If there are students linked to the selected classes, they will also be excluded. Do you wish to continue?" xml:space="preserve">
+    <value>If there are students linked to the selected classes, they will also be excluded. Do you wish to continue?</value>
+  </data>
+  <data name="Select only one class to list students." xml:space="preserve">
+    <value>Select only one class to list students.</value>
+  </data>
+  <data name="Students" xml:space="preserve">
+    <value>Students</value>
+  </data>
 </root>
