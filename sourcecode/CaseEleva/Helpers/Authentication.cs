@@ -1,12 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using CaseEleva.Models;
-using System.Web.Security;
-using System.Text.RegularExpressions;
-using System.Text;
 using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Web.Security;
 
 namespace CaseEleva.Helpers
 {

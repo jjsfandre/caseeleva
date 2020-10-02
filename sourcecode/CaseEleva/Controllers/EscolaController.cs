@@ -1,7 +1,6 @@
 ﻿using CaseEleva.Models.SearchModel;
 using CaseEleva.Models.ViewModel;
 using CaseEleva.Service;
-using System;
 using System.Web.Mvc;
 
 namespace CaseEleva.Controllers

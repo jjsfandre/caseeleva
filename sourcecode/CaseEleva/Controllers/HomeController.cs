@@ -1,6 +1,4 @@
-﻿using CaseEleva.Models;
-using CaseEleva.Service;
-using System.Linq;
+﻿using CaseEleva.Service;
 using System.Web.Mvc;
 
 namespace CaseEleva.Controllers
