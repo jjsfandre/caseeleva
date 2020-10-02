@@ -31,12 +31,15 @@
                     <a href="/Escola/Index"><i class="fa fa-institution"></i> <span class="nav-label">@GlobalizationController.GetInstance().GetString("Schools")</span></a>
                 </li>
                 <li>
+                    <a href="/Turma/Index"><i class="fa fa-graduation-cap"></i> <span class="nav-label">@GlobalizationController.GetInstance().GetString("Classes")</span></a>
+                </li>
+                <li>
                     <a href="#"><i class="fa fa-gears"></i> <span class="nav-label">@GlobalizationController.GetInstance().GetString("Settings")</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li>
                             <a href="#"><i class="fa fa-language"></i> <span class="nav-label">@GlobalizationController.GetInstance().GetString("Language")</span><span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                @Html.Action("GetIdiomas","Idioma")
+                                @Html.Action("GetIdiomas", "Idioma")
 
                             </ul>
                         </li>

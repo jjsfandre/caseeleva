@@ -1344,6 +1344,21 @@
   <data name="Code" xml:space="preserve">
     <value>Código</value>
   </data>
+  <data name="New class" xml:space="preserve">
+    <value>Nova turma</value>
+  </data>
+  <data name="No class selected." xml:space="preserve">
+    <value>Nenhuma turma selecionada.</value>
+  </data>
+  <data name="School" xml:space="preserve">
+    <value>Escola</value>
+  </data>
+  <data name="Select one or more classes to exclude." xml:space="preserve">
+    <value>Selecione uma ou mais turmas para excluir.</value>
+  </data>
+  <data name="Select only one class to edit." xml:space="preserve">
+    <value>Selecione apenas uma turma para editar.</value>
+  </data>
   <data name="Teacher" xml:space="preserve">
     <value>Professor</value>
   </data>

@@ -9,8 +9,11 @@ namespace CaseEleva.Repository
     {
 
         private static EscolaRepository _instance;
+        private readonly TurmaRepository TurmaRepository;
 
-        private EscolaRepository() { }
+        private EscolaRepository() {
+            TurmaRepository = TurmaRepository.GetInstance();
+        }
 
         public static EscolaRepository GetInstance()
         {
@@ -69,6 +72,9 @@ namespace CaseEleva.Repository
         public void DeleteByIds(int[] ids)
         {
             var context = DBFactory.GetInstance().GetDb();
+
+            TurmaRepository.DeleteByEscolaIds(ids, context, false);
+
             List<Escola> escolas = GetByIds(ids, context);
             context.Escola.RemoveRange(escolas);
             context.SaveChanges();

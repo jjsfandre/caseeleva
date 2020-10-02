@@ -1,0 +1,96 @@
+﻿@model AssociationViewModel<TurmaSearchModel, TurmaViewModel>
+@using CaseEleva.Models.ViewModel;
+@using CaseEleva.Models.SearchModel;
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@GlobalizationController.GetInstance().GetString("Classes")</h2>
+    </div>
+</div>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h3>@GlobalizationController.GetInstance().GetString("Advanced search")</h3>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { @action = "", @class = "form-horizontal", @id = "form-turma-filter", onsubmit = "CE.Turma.FiltrarTurmas()" }))
+        {
+            <div id="divFilterResumeTurma" class="row CE-Filter-Resume">
+                <div class="row">
+                    @Html.LabelFor(model => model.SearchModel.Codigo, GlobalizationController.GetInstance().GetString("Code"), htmlAttributes: new { @class = "col-lg-4" })
+                    @Html.LabelFor(model => model.SearchModel.EscolaId, GlobalizationController.GetInstance().GetString("School"), htmlAttributes: new { @class = "col-lg-4" })
+                    @Html.LabelFor(model => model.SearchModel.Professor, GlobalizationController.GetInstance().GetString("Teacher"), htmlAttributes: new { @class = "col-lg-4" })
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ">
+                        @Html.TextBoxFor(model => model.SearchModel.Codigo,  new {id= "Codigo", @class = "form-control text-box single-line" } )
+                    </div>
+                    <div class="col-lg-4 ">
+                        @Html.TextBoxFor(model => model.SearchModel.EscolaId,  new { id = "EscolaId", @class = "form-control text-box single-line" } )
+                    </div>
+                    <div class="col-lg-4 ">
+                        @Html.TextBoxFor(model => model.SearchModel.Professor,  new { id = "Professor", @class = "form-control text-box single-line" } )
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button type="submit" id="crudmodel-turma-grid-resume-filter" class="btn btn-w-m btn-primary EW-Button btn-resume-filter"><i class="icon fa fa-search"></i><span class="">@GlobalizationController.GetInstance().GetString("Search")</span></button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <button type="button" id="crudmodel-turma-grid-resume-add" class="btn btn-w-m btn-success EW-Button " onclick="CE.Turma.OpenDetail(false)">
+            <i class="icon fa fa-plus-square-o"></i><span class="">@GlobalizationController.GetInstance().GetString("Add")</span>
+        </button>
+        <button type="button" id="crudmodel-turma-grid-resume-edit" class="btn btn-w-m btn-warning EW-Button " onclick="CE.Turma.OpenDetail(true)">
+            <i class="icon fa fa-edit"></i><span class="">@GlobalizationController.GetInstance().GetString("Edit")</span>
+        </button>
+        <button type="button" id="crudmodel-turma-grid-resume-remove" class="btn btn-w-m btn-danger EW-Button " onclick="CE.Turma.Delete()">
+            <i class="icon fa fa-trash"></i><span class="">@GlobalizationController.GetInstance().GetString("Remove")</span>
+        </button>
+    </div>
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table table-striped" id="crudmodel-turma-grid-resume">
+                <thead>
+                    <tr>
+
+                        <th></th>
+                        <th>@GlobalizationController.GetInstance().GetString("Code")</th>
+                        <th>@GlobalizationController.GetInstance().GetString("School")</th>
+                        <th>@GlobalizationController.GetInstance().GetString("Teacher")</th>
+                        <th>@GlobalizationController.GetInstance().GetString("Total students")</th>
+                        <th>@GlobalizationController.GetInstance().GetString("Description")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var turma in Model.Objects)
+                    {
+                        <tr>
+                            <td><input type="checkbox" class="i-checks" id_grid="@turma.Id" name="check-id-@turma.Id"></td>
+                            <td>@turma.Codigo</td>
+                            <td>@turma.Escola.Nome</td>
+                            <td>@turma.Professor</td>
+                            <td>@turma.TotalAlunos</td>
+                            <td>@turma.Descricao</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    CE.Turma.Setup();
+</script>

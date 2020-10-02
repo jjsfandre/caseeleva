@@ -12,13 +12,6 @@ CE.Escola.FiltrarEscolas = function (form) {
     })
 }
 
-CE.Escola.Setup = function () {
-    $('#form-escola-filter').submit(function (e) {
-        e.preventDefault();
-    });
-}
-
-
 CE.Escola.Delete = function () {
     var selectedIds = CE.GetSelectedIdsFromGrid($('#crudmodel-escola-grid-resume'));
 
@@ -77,7 +70,7 @@ CE.Escola.Turmas = function () {
     }
 
     var params = {
-        Id : selectedIds[0]
+        EscolaId : selectedIds[0]
     }
 
     CE.LoadPage({

@@ -87,6 +87,11 @@ namespace CaseEleva.Service
             formModel.FieldsWithError.Clear();
             var messageError =  new List<String>();
 
+            if (String.IsNullOrEmpty(formModel.Codigo))
+            {
+                messageError.Add(String.Format(GlobalizationController.GetInstance().GetString("The field '{0}' is required."), GlobalizationController.GetInstance().GetString("Code")));
+                formModel.FieldsWithError.Add(nameof(formModel.Codigo));
+            }
             if (!formModel.TotalAlunos.HasValue)
             {
                 messageError.Add(String.Format(GlobalizationController.GetInstance().GetString("The field '{0}' is required."), GlobalizationController.GetInstance().GetString("Total students")));

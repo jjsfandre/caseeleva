@@ -63,6 +63,14 @@ namespace CaseEleva.Repository
             return context.Turma.Where(x => ids.Contains(x.Id)).ToList();
         }
 
+        public List<Turma> GetByEscolaIds(int[] ids, CaseElevaEntities context = null)
+        {
+            if (context == null)
+                context = DBFactory.GetInstance().GetDb();
+
+            return context.Turma.Where(x => ids.Contains(x.EscolaId)).ToList();
+        }
+
         public void DeleteByIds(int[] ids)
         {
             var context = DBFactory.GetInstance().GetDb();
@@ -71,5 +79,19 @@ namespace CaseEleva.Repository
             context.SaveChanges();
 
         }
+
+        public void DeleteByEscolaIds(int[] ids, CaseElevaEntities context = null, bool isToSaveContext = true)
+        {
+            if (context == null)
+                context = DBFactory.GetInstance().GetDb();
+
+            List<Turma> Turmas = GetByEscolaIds(ids, context);
+            context.Turma.RemoveRange(Turmas);
+
+            if (isToSaveContext)
+                context.SaveChanges();
+        }
+
+        //TurmaRepository = TurmaRepository.GetInstance();
     }
 }

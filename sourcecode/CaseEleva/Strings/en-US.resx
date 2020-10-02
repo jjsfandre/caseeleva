@@ -1344,6 +1344,21 @@
   <data name="Code" xml:space="preserve">
     <value>Code</value>
   </data>
+  <data name="New class" xml:space="preserve">
+    <value>New class</value>
+  </data>
+  <data name="No class selected." xml:space="preserve">
+    <value>No class selected.</value>
+  </data>
+  <data name="School" xml:space="preserve">
+    <value>School</value>
+  </data>
+  <data name="Select one or more classes to exclude." xml:space="preserve">
+    <value>Select one or more classes to exclude.</value>
+  </data>
+  <data name="Select only one class to edit." xml:space="preserve">
+    <value>Select only one class to edit.</value>
+  </data>
   <data name="Teacher" xml:space="preserve">
     <value>Teacher</value>
   </data>
