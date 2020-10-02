@@ -22,7 +22,11 @@ CE.LoadPage = function (config) {
         url = config.Action != null ? url + config.Action + "/" : url;
         url = location.protocol + "//" + location.host + "/" + url;
     }
-    location.href = url;
+    var serializedParams = "";
+    if (config.Params != null)
+        serializedParams ="?" + new URLSearchParams(config.Params).toString();
+
+    location.href = url + serializedParams;
 }
 
 CE.Request = function (cfg) {
@@ -131,24 +135,6 @@ CE.ShowMessageForgotPassword = function () {
     var title = CE.Helpers.Globalization.GetString("Attention");
     var text = CE.Helpers.Globalization.GetString("There is no need for authentication data at this time. Just click \"Login\"!");
     CE.Alert.Info(title, text);
-}
-
-CE.LoadPageMenu = function (cfg) {
-    CE.Request({
-        Controller: cfg.Controller,
-        Action: cfg.Action,
-        Method: 'GET',
-        Delay: 200,
-        Mask: {
-            Title: CE.Helpers.Globalization.GetString('Wait'),
-            Message: CE.Helpers.Globalization.GetString('Loading page...')
-        },
-        JSONResponse: false,
-        Params: cfg.Params,
-        Success: function (resp) {
-            $('#contents-page').html(resp)
-        }
-    })
 }
 
 

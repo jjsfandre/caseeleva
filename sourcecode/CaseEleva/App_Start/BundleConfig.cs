@@ -35,6 +35,7 @@ namespace CaseEleva
                    .Include("~/Content/Resources/c3.min.css", cssRewriter)
                    .Include("~/Content/Resources/datepicker3.css", cssRewriter)
                    .Include("~/Content/Resources/bootstrap-iconpicker.min.css", cssRewriter)
+                   .Include("~/Content/Resources/iCheck/custom.css", cssRewriter)
                    //Fonts
                    .Include("~/Content/Resources/font-awesome.min.css", cssRewriter)
                    .Include("~/Content/Resources/pe-icon-set-food.min.css", cssRewriter)
@@ -86,7 +87,8 @@ namespace CaseEleva
                       "~/Scripts/Resources/d3.min.js",
                       "~/Scripts/Resources/bootstrap-datepicker.js",
                       "~/Scripts/Resources/moment-with-locales.js",
-                      "~/Scripts/Resources/bootstrap-iconpicker.min.js"
+                      "~/Scripts/Resources/bootstrap-iconpicker.min.js",
+                      "~/Scripts/Resources/icheck.min.js"
              ));
 
             //CaseEleva 

@@ -1,0 +1,10 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+
+        CE.Helpers.Globalization.SetConfig(@Html.Raw(GlobalizationController.GetInstance().GetJavascriptConfig()));
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>

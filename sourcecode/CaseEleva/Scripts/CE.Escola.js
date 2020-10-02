@@ -5,7 +5,7 @@ CE.Escola.FiltrarEscolas = function (form) {
 
     var params = CE.SerializeFormFilter($('#divFilterResumeEscola'));
 
-    CE.LoadPageMenu({
+    CE.LoadPage({
         Controller: 'Escola',
         Action: 'Index',
         Params: params.searchModel

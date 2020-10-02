@@ -48,16 +48,16 @@
 
 <div class="ibox float-e-margins">
     <div class="ibox-title">
-        <button type="button" id="crudmodel-escola-grid-resume-add" class="btn btn-w-m btn-success EW-Button ">
+        <button type="button" id="crudmodel-escola-grid-resume-add" class="btn btn-w-m btn-success EW-Button " onclick="CE.Escola.OpenDetail(false)">
             <i class="icon fa fa-plus-square-o"></i><span class="">@GlobalizationController.GetInstance().GetString("Add")</span>
         </button>
-        <button type="button" id="crudmodel-escola-grid-resume-edit" class="btn btn-w-m btn-warning EW-Button ">
+        <button type="button" id="crudmodel-escola-grid-resume-edit" class="btn btn-w-m btn-warning EW-Button " onclick="CE.Escola.OpenDetail(true)">
             <i class="icon fa fa-edit"></i><span class="">@GlobalizationController.GetInstance().GetString("Edit")</span>
         </button>
-        <button type="button" id="crudmodel-escola-grid-resume-remove" class="btn btn-w-m btn-danger EW-Button ">
+        <button type="button" id="crudmodel-escola-grid-resume-remove" class="btn btn-w-m btn-danger EW-Button " onclick="CE.Escola.Delete()">
             <i class="icon fa fa-trash"></i><span class="">@GlobalizationController.GetInstance().GetString("Remove")</span>
         </button>
-        <button type="button" id="crudmodel-escola-grid-resume-remove" class="btn btn-w-m btn-danger EW-Button ">
+        <button type="button" id="crudmodel-escola-grid-resume-remove" class="btn btn-w-m btn-danger EW-Button " onclick="CE.Escola.Turmas()">
             <i class="icon fa fa-trash"></i><span class="">@GlobalizationController.GetInstance().GetString("Remove")</span>
         </button>
     </div>
@@ -81,7 +81,7 @@
                     @foreach (var escola in Model.Objects)
                     {
                         <tr>
-                            <td><input type="checkbox" checked class="i-checks" name="check-id-@escola.Id"></td>
+                            <td><input type="checkbox" class="i-checks" name="check-id-@escola.Id"></td>
                             <td>@escola.Nome</td>
                             <td>@escola.Diretor</td>
                             <td>@escola.Logradouro</td>
