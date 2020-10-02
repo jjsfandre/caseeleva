@@ -249,6 +249,7 @@
     </Content>
     <None Include="Scripts\Resources\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\CE.Alert.js" />
+    <Content Include="Scripts\CE.Aluno.js" />
     <Content Include="Scripts\CE.Turma.js" />
     <Content Include="Scripts\CE.Escola.js" />
     <Content Include="Scripts\Helpers\CE.Helpers.Globalization.js" />
@@ -288,6 +289,7 @@
     <Compile Include="App_Start\GlobalizationConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ConfiguracaoController.cs" />
+    <Compile Include="Controllers\AlunoController.cs" />
     <Compile Include="Controllers\TurmaController.cs" />
     <Compile Include="Controllers\EscolaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -365,6 +367,8 @@
     <Content Include="Views\Turma\Index.cshtml" />
     <Content Include="Views\Login\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Aluno\Detail.cshtml" />
+    <Content Include="Views\Aluno\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,101 @@
+﻿@model AssociationViewModel<AlunoSearchModel, AlunoViewModel>
+@using CaseEleva.Models.ViewModel;
+@using CaseEleva.Models.SearchModel;
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@GlobalizationController.GetInstance().GetString("Classes")</h2>
+    </div>
+</div>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h3>@GlobalizationController.GetInstance().GetString("Advanced search")</h3>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { @action = "", @class = "form-horizontal", @id = "form-aluno-filter", onsubmit = "CE.Aluno.FiltrarAlunos()" }))
+        {
+            <div id="divFilterResumeAluno" class="row CE-Filter-Resume">
+                <div class="row">
+                    @Html.LabelFor(model => model.SearchModel.Nome, GlobalizationController.GetInstance().GetString("Name"), htmlAttributes: new { @class = "col-lg-3" })
+                    @Html.LabelFor(model => model.SearchModel.EscolaId, GlobalizationController.GetInstance().GetString("School"), htmlAttributes: new { @class = "col-lg-3" })
+                    @Html.LabelFor(model => model.SearchModel.TurmaId, GlobalizationController.GetInstance().GetString("Class"), htmlAttributes: new { @class = "col-lg-3" })
+                    @Html.LabelFor(model => model.SearchModel.Email, GlobalizationController.GetInstance().GetString("E-mail"), htmlAttributes: new { @class = "col-lg-3" })
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 ">
+                        @Html.TextBoxFor(model => model.SearchModel.Nome, new { id = "Nome", @class = "form-control text-box single-line" })
+                    </div>
+                    <div class="col-lg-3 ">
+                        @Html.DropDownListFor(model => model.SearchModel.EscolaId, new SelectList(@ViewBag.Escolas, "Id", "Nome"), GlobalizationController.GetInstance().GetString("Select a school"), htmlAttributes: new { id = "EscolaId", @class = "chosen-select form-control text-box single-line" })
+                    </div>
+                    <div class="col-lg-3 ">
+                        @Html.DropDownListFor(model => model.SearchModel.TurmaId, new SelectList(Enumerable.Empty<SelectListItem>()), GlobalizationController.GetInstance().GetString("Select a school and then select a class"), htmlAttributes: new { id = "TurmaId", @class = "chosen-select form-control text-box single-line" })
+                    </div>
+                    <div class="col-lg-3 ">
+                        @Html.TextBoxFor(model => model.SearchModel.Email, new { id = "Email", @class = "form-control text-box single-line" })
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button type="submit" id="crudmodel-aluno-grid-resume-filter" class="btn btn-w-m btn-primary EW-Button btn-resume-filter"><i class="icon fa fa-search"></i><span class="">@GlobalizationController.GetInstance().GetString("Search")</span></button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <button type="button" id="crudmodel-aluno-grid-resume-add" class="btn btn-w-m btn-success EW-Button " onclick="CE.Aluno.OpenDetail(false)">
+            <i class="icon fa fa-plus-square-o"></i><span class="">@GlobalizationController.GetInstance().GetString("Add")</span>
+        </button>
+        <button type="button" id="crudmodel-aluno-grid-resume-edit" class="btn btn-w-m btn-warning EW-Button " onclick="CE.Aluno.OpenDetail(true)">
+            <i class="icon fa fa-edit"></i><span class="">@GlobalizationController.GetInstance().GetString("Edit")</span>
+        </button>
+        <button type="button" id="crudmodel-aluno-grid-resume-remove" class="btn btn-w-m btn-danger EW-Button " onclick="CE.Aluno.Delete()">
+            <i class="icon fa fa-trash"></i><span class="">@GlobalizationController.GetInstance().GetString("Remove")</span>
+        </button>
+    </div>
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table table-striped" id="crudmodel-aluno-grid-resume">
+                <thead>
+                    <tr>
+
+                        <th></th>
+                        <th>@GlobalizationController.GetInstance().GetString("Name")</th>
+                        <th>@GlobalizationController.GetInstance().GetString("Class")</th>
+                        <th>@GlobalizationController.GetInstance().GetString("School")</th>
+                        <th>@GlobalizationController.GetInstance().GetString("E-mail")</th>
+                        <th>@GlobalizationController.GetInstance().GetString("Telephone")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var aluno in Model.Objects)
+                    {
+                        <tr>
+                            <td><input type="checkbox" class="i-checks" id_grid="@aluno.Id" name="check-id-@aluno.Id"></td>
+                            <td>@aluno.Nome</td>
+                            <td>@aluno.Turma.Codigo</td>
+                            <td>@aluno.Turma.Escola.Nome</td>
+                            <td>@aluno.Email</td>
+                            <td>@aluno.Telefone</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    CE.Aluno.Setup();
+</script>

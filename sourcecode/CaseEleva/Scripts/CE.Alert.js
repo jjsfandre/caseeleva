@@ -8,6 +8,10 @@ CE.Alert.CreateAlert = function (config) {
     config.SweetAlert.confirmButtonColor = config.SweetAlert.confirmButtonColor || "#16987e";
     config.SweetAlert.cancelButtonColor = config.SweetAlert.cancelButtonColor || '#aaa';
 
+    config.Events = config.Events || {
+        Confirm: false,
+        Cancel: false,
+    };
 
     return window.swal(config.SweetAlert).then(config.Events.Confirm, config.Events.Cancel);
 }
@@ -55,9 +59,13 @@ CE.Alert.Info = function (title, text, events) {
 }
 
 CE.Alert.CurrentLoadingAlert = null;
-CE.Alert.ShowLoading = function (title, message) {
+CE.Alert.ShowLoading = function (title, message, events) {
     return CE.Alert.CurrentLoadingAlert = CE.Alert.CreateAlert({
         Id: 'default-loading-alert',
+        Events: {
+            Confirm: events ? events.Confirm : false,
+            Cancel: events ? events.Cancel : false,
+        },
         SweetAlert: {
             title: title,
             html: message + '<div class="clice-loader-contents"><svg class="circle-loader progress"><circle cx="20" cy="20" r="15"></svg></div>',

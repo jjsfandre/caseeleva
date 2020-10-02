@@ -1380,4 +1380,16 @@
   <data name="Students" xml:space="preserve">
     <value>Alunos</value>
   </data>
+  <data name="Class" xml:space="preserve">
+    <value>Turma</value>
+  </data>
+  <data name="New student" xml:space="preserve">
+    <value>Novo aluno</value>
+  </data>
+  <data name="Refreshing classes..." xml:space="preserve">
+    <value>Atualizando turmas...</value>
+  </data>
+  <data name="Select a school and then select a class" xml:space="preserve">
+    <value>Selecione uma escola e, em seguida, selecione uma turma</value>
+  </data>
 </root>

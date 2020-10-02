@@ -1380,4 +1380,16 @@
   <data name="Students" xml:space="preserve">
     <value>Students</value>
   </data>
+  <data name="Class" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="New student" xml:space="preserve">
+    <value>New student</value>
+  </data>
+  <data name="Refreshing classes..." xml:space="preserve">
+    <value>Refreshing classes...</value>
+  </data>
+  <data name="Select a school and then select a class" xml:space="preserve">
+    <value>Select a school and then select a class</value>
+  </data>
 </root>

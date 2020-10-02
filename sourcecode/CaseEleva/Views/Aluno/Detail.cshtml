@@ -1,0 +1,79 @@
+﻿@model  AlunoViewModel
+@using CaseEleva.Models.ViewModel;
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>
+            @if (Model.Id.HasValue)
+            {
+
+                @(string.Format("{0} {1}", @GlobalizationController.GetInstance().GetString("Editing"), @Model.Nome))
+            }
+            else
+            {
+                @GlobalizationController.GetInstance().GetString("New student")
+            }
+        </h2>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight detail-wrapper">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+            <div class="ibox float-e-margins">
+                @using (Html.BeginForm("Save", "Aluno", FormMethod.Post, new { @class = "form-horizontal", @id = "form-aluno-detail" }))
+                {
+                    @Html.HiddenFor(model => model.Id);
+                    <div class="ibox-content">
+                        <div class="row row-label">
+                            @Html.LabelFor(model => model.Nome, GlobalizationController.GetInstance().GetString("Name"), htmlAttributes: new { @class = "col-lg-4 required-symbol" })
+                            @Html.LabelFor(model => model.Email, GlobalizationController.GetInstance().GetString("E-mail"), htmlAttributes: new { @class = "col-lg-4 " })
+                            @Html.LabelFor(model => model.Telefone, GlobalizationController.GetInstance().GetString("Telephone"), htmlAttributes: new { @class = "col-lg-4 " })
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 ">
+                                @Html.TextBoxFor(model => model.Nome, new { @class = "form-control text-box single-line " })
+                            </div>
+                            <div class="col-lg-4 ">
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control text-box single-line" })
+                            </div>
+                            <div class="col-lg-4 ">
+                                @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control text-box single-line" })
+                            </div>
+                        </div>
+                        <div class="row row-label">
+                            @Html.Label(GlobalizationController.GetInstance().GetString("School"), htmlAttributes: new { @class = "col-lg-6" })
+                            @Html.LabelFor(model => model.TurmaId, GlobalizationController.GetInstance().GetString("Class"), htmlAttributes: new { @class = "col-lg-6 required-symbol" })
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                @Html.DropDownList("EscolaId", new SelectList(@ViewBag.Escolas, "Id", "Nome"), GlobalizationController.GetInstance().GetString("Select a school"), htmlAttributes: new { @class = "chosen-select form-control text-box single-line" })
+                            </div>
+                            <div class="col-lg-6 ">
+                                @Html.DropDownListFor(model => model.TurmaId, new SelectList(Enumerable.Empty<SelectListItem>()), GlobalizationController.GetInstance().GetString("Select a school and then select a class"), htmlAttributes: new { @class = "chosen-select form-control text-box single-line" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ibox-footer">
+                        <div class="form-group">
+                            <span class="col-sm-12 ">
+                                <button class="btn btn-w-m btn-danger EW-Button pull-right" type="button" onclick="location.href='/Aluno/Index';">
+                                    <i class="icon fa fa-times"></i><span class="">@GlobalizationController.GetInstance().GetString("Cancel")</span>
+                                </button>
+                                <button class="btn btn-w-m btn-primary EW-Button pull-right" type="submit">
+                                    <i class="icon fa fa-check"></i><span class="">@GlobalizationController.GetInstance().GetString("Save")</span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    CE.Aluno.Setup();
+</script>
