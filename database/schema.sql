@@ -24,7 +24,7 @@ GO
 CREATE TABLE [dbo].[Turma](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[EscolaId] [int] NOT NULL,
-	[Codigo] [varchar](70) NULL,
+	[Codigo] [varchar](70) NOT NULL,
 	[Professor] [varchar](70) NOT NULL,
 	[TotalAlunos] [int] NOT NULL,
 	[Descricao] [varchar](max) NULL,
@@ -83,3 +83,26 @@ REFERENCES [dbo].[Idioma] ([Id])
 GO
 ALTER TABLE [dbo].[Configuracao] CHECK CONSTRAINT [Configuracao_Idioma_FK]
 GO
+
+
+CREATE TABLE [dbo].[Aluno](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[TurmaId] [int] NOT NULL,
+	[Nome] [varchar](70) NOT NULL,
+	[Email] [varchar](70) NULL,
+	[Telefone] [varchar](70) NULL
+ CONSTRAINT [Aluno_Id_PK] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+
+
+ALTER TABLE [dbo].[Aluno]  WITH CHECK ADD  CONSTRAINT [Aluno_Turma_FK] FOREIGN KEY([TurmaId])
+REFERENCES [dbo].[Turma] ([Id])
+GO
+ALTER TABLE [dbo].[Aluno] CHECK CONSTRAINT [Aluno_Turma_FK]
+GO
+

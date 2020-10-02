@@ -299,6 +299,9 @@
     </Compile>
     <Compile Include="Helpers\Globalization.cs" />
     <Compile Include="Helpers\GlobalizationController.cs" />
+    <Compile Include="Models\Aluno.cs">
+      <DependentUpon>CaseElevaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CaseElevaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

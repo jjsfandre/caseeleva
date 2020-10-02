@@ -11,6 +11,8 @@
         <EntityTypeShape EntityType="CaseElevaModel.Idioma" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="CaseElevaModel.Configuracao" Width="1.5" PointX="3" PointY="6" />
         <AssociationConnector Association="CaseElevaModel.Configuracao_Idioma_FK" />
+        <EntityTypeShape EntityType="CaseElevaModel.Aluno" Width="1.5" PointX="9" PointY="2.5" />
+        <AssociationConnector Association="CaseElevaModel.Aluno_Turma_FK" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

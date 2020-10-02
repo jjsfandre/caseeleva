@@ -29,5 +29,6 @@ namespace CaseEleva.Models
         public virtual DbSet<Turma> Turma { get; set; }
         public virtual DbSet<Idioma> Idioma { get; set; }
         public virtual DbSet<Configuracao> Configuracao { get; set; }
+        public virtual DbSet<Aluno> Aluno { get; set; }
     }
 }

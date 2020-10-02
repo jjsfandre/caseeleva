@@ -14,6 +14,12 @@ namespace CaseEleva.Models
     
     public partial class Turma
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Turma()
+        {
+            this.Aluno = new HashSet<Aluno>();
+        }
+    
         public int Id { get; set; }
         public int EscolaId { get; set; }
         public string Professor { get; set; }
@@ -22,5 +28,7 @@ namespace CaseEleva.Models
         public string Codigo { get; set; }
     
         public virtual Escola Escola { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Aluno> Aluno { get; set; }
     }
 }

@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="CaseElevaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Aluno">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TurmaId" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="70" />
+          <Property Name="Telefone" Type="varchar" MaxLength="70" />
+        </EntityType>
         <EntityType Name="Configuracao">
           <Key>
             <PropertyRef Name="Id" />
@@ -22,9 +32,9 @@
           <Property Name="Numero" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="Complemento" Type="varchar" MaxLength="70" />
           <Property Name="Cidade" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="Telefone" Type="varchar" MaxLength="70" />
           <Property Name="Diretor" Type="varchar" MaxLength="70" />
-          <Property Name="Estado" Type="varchar" MaxLength="70" Nullable="false" />
         </EntityType>
         <EntityType Name="Idioma">
           <Key>
@@ -46,6 +56,18 @@
           <Property Name="TotalAlunos" Type="int" Nullable="false" />
           <Property Name="Descricao" Type="varchar(max)" />
         </EntityType>
+        <Association Name="Aluno_Turma_FK">
+          <End Role="Turma" Type="Self.Turma" Multiplicity="1" />
+          <End Role="Aluno" Type="Self.Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Aluno">
+              <PropertyRef Name="TurmaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="Configuracao_Idioma_FK">
           <End Role="Idioma" Type="Self.Idioma" Multiplicity="1" />
           <End Role="Configuracao" Type="Self.Configuracao" Multiplicity="*" />
@@ -71,10 +93,15 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="CaseElevaModelStoreContainer">
+          <EntitySet Name="Aluno" EntityType="Self.Aluno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Configuracao" EntityType="Self.Configuracao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Escola" EntityType="Self.Escola" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Idioma" EntityType="Self.Idioma" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Turma" EntityType="Self.Turma" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Aluno_Turma_FK" Association="Self.Aluno_Turma_FK">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Aluno" EntitySet="Aluno" />
+          </AssociationSet>
           <AssociationSet Name="Configuracao_Idioma_FK" Association="Self.Configuracao_Idioma_FK">
             <End Role="Idioma" EntitySet="Idioma" />
             <End Role="Configuracao" EntitySet="Configuracao" />
@@ -100,6 +127,11 @@
           <AssociationSet Name="Configuracao_Idioma_FK" Association="CaseElevaModel.Configuracao_Idioma_FK">
             <End Role="Idioma" EntitySet="Idioma" />
             <End Role="Configuracao" EntitySet="Configuracao" />
+          </AssociationSet>
+          <EntitySet Name="Aluno" EntityType="CaseElevaModel.Aluno" />
+          <AssociationSet Name="Aluno_Turma_FK" Association="CaseElevaModel.Aluno_Turma_FK">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Aluno" EntitySet="Aluno" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Escola">
@@ -128,6 +160,7 @@
           <Property Name="Descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Escola" Relationship="CaseElevaModel.Turma_Escola_FK" FromRole="Turma" ToRole="Escola" />
           <Property Name="Codigo" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Aluno" Relationship="CaseElevaModel.Aluno_Turma_FK" FromRole="Turma" ToRole="Aluno" />
         </EntityType>
         <Association Name="Turma_Escola_FK">
           <End Type="CaseElevaModel.Escola" Role="Escola" Multiplicity="1" />
@@ -168,6 +201,29 @@
             </Principal>
             <Dependent Role="Configuracao">
               <PropertyRef Name="IdiomaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Aluno">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TurmaId" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Telefone" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Turma" Relationship="CaseElevaModel.Aluno_Turma_FK" FromRole="Aluno" ToRole="Turma" />
+        </EntityType>
+        <Association Name="Aluno_Turma_FK">
+          <End Type="CaseElevaModel.Turma" Role="Turma" Multiplicity="1" />
+          <End Type="CaseElevaModel.Aluno" Role="Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Aluno">
+              <PropertyRef Name="TurmaId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -218,6 +274,17 @@
             <EntityTypeMapping TypeName="CaseElevaModel.Configuracao">
               <MappingFragment StoreEntitySet="Configuracao">
                 <ScalarProperty Name="IdiomaId" ColumnName="IdiomaId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Aluno">
+            <EntityTypeMapping TypeName="CaseElevaModel.Aluno">
+              <MappingFragment StoreEntitySet="Aluno">
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="TurmaId" ColumnName="TurmaId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
